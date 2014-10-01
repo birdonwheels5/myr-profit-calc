@@ -13,6 +13,9 @@ function read_users($filename)
 	$skein_hashrate = 0;
 	$groestl_hashrate = 0;
 	$qubit_hashrate = 0;
+	$power_consumption = 0;
+	$power_cost = 0;
+	$pool_fee = 0;
 	
 	$index = 0;
 	
@@ -53,6 +56,21 @@ function read_users($filename)
 		{
 			$qubit_hashrate = trim(str_ireplace("qubit: ", "", $line));
 		}
+		
+		if (strcmp(stristr($line,"pcons: "), $line) == 0)
+		{
+			$power_consumption = trim(str_ireplace("pcons: ", "", $line));
+		}
+		
+		if (strcmp(stristr($line,"pcost: "), $line) == 0)
+		{
+			$power_cost = trim(str_ireplace("pcost: ", "", $line));
+		}
+		
+		if (strcmp(stristr($line,"poolfee: "), $line) == 0)
+		{
+			$pool_fee = trim(str_ireplace("poolfee: ", "", $line));
+		}
 
 		// Check the current line for "qpwoeiruty" which separates users, and create users
 		if (strcmp(stristr($line, $separator), $line) == 0)
@@ -72,12 +90,18 @@ function read_users($filename)
 				echo "<br>";
 				echo $qubit_hashrate;
 				echo "<br>";
+				echo $power_consumption;
+				echo "<br>";
+				echo $power_cost;
+				echo "<br>";
+				echo $pool_fee;
+				echo "<br>";
 				echo "---------";
 				echo "<br>";	
 			}
 			
 			$index++;
-			$user = new User($ip_address, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
+			$user = new User($ip_address, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $power_consumption, $power_cost, $pool_fee);
 			$users[$index] = $user;
 		}
 	}
@@ -172,6 +196,9 @@ function display_ip_info($filename, $array)
 		print "skein: " . $array[$i]->get_skein_hashrate() . "<br>";
 		print " groestl: " . $array[$i]->get_groestl_hashrate() . "<br>";
 		print "qubit: " . $array[$i]->get_qubit_hashrate() . "<br>";
+		print "power consumption: " . $array[$i]->get_power_consumption() . "<br>";
+		print "power use: " . $array[$i]->get_power_cost() . "<br>";
+		print "pool fee: " . $array[$i]->get_pool_fee() . "<br>";
 		print "<hr/>";
 	}
 }
