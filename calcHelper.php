@@ -7,7 +7,7 @@ function get_avg_diffs($avg)
 	$num_avg = $avg;
 	
 	// Establish connection to the database
-	$con=mysqli_connect("127.0.0.1", "root", "pw", "myriadcoin");
+	$con=mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
 	if (mysqli_connect_errno()) 
 	{
