@@ -6,8 +6,8 @@
 		<title>Wat?</title>
 		<link rel="stylesheet" href="http://birdonwheels5.no-ip.org/css/main.min.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" title="Font Styles"/>
-		<?php include "/var/www/myr-insight-stats/methodHelper.php";
-		      include "/var/www/myr-insight-stats/userManager.php"; 
+		<?php include "methodHelper.php";
+		      include "userManager.php"; 
 		      include "calcHelper.php"; ?>
 	</head>
 	
