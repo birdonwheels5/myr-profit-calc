@@ -42,6 +42,9 @@
 			$skein_hashrate = $users[$user_position_in_array]->get_skein_hashrate();
 			$groestl_hashrate = $users[$user_position_in_array]->get_groestl_hashrate();
 			$qubit_hashrate = $users[$user_position_in_array]->get_qubit_hashrate();
+			$power_consumption = $users[$user_position_in_array]->get_power_consumption();
+			$power_cost = $users[$user_position_in_array]->get_power_cost();
+			$pool_fee = $users[$user_position_in_array]->get_pool_fee();
 			
 			// -----------------------
 			
@@ -103,7 +106,11 @@
 			$qubit_hashrate = 1; // Qubit MH/s
 			$qubit_input = "";
 			
-			file_put_contents($filename, "ip: " . $ip . "\n" . "sha: " . $sha_hashrate  . "\n" . "scrypt: " . $scrypt_hashrate . "\n" . "skein: " . $skein_hashrate . "\n" . "groestl: " . $groestl_hashrate . "\n" . "qubit: " . $qubit_hashrate . "\n" . $separator . "\n", FILE_APPEND);
+			$power_consumption = 0;
+			$power_cost = 0;
+			$pool_fee = 0;
+			
+			file_put_contents($filename, "ip: " . $ip . "\n" . "sha: " . $sha_hashrate  . "\n" . "scrypt: " . $scrypt_hashrate . "\n" . "skein: " . $skein_hashrate . "\n" . "groestl: " . $groestl_hashrate . "\n" . "qubit: " . $qubit_hashrate . "\n" . "pcons: " . $power_consumption . "\n" . "pcost: " . $power_cost . "\n" . "poolfee: " . $pool_fee . "\n" .  $separator . "\n", FILE_APPEND);
 		}
 		
 		
