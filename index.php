@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" title="Font Styles"/>
 		<?php include "/var/www/myr-insight-stats/methodHelper.php";
 		      include "/var/www/myr-insight-stats/userManager.php"; 
-		      include "calcHelper.php?>
+		      include "calcHelper.php"; ?>
 	</head>
 	
 	<body style="background-color:#f4f4f4;float:left;background-color:white">
