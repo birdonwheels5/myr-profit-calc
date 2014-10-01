@@ -11,11 +11,11 @@ class User
   private $qubit_hashrate = 0;
   private $power_consumption = 0;
   private $power_cost = 0;
-  private $pool_fees = 0;
+  private $pool_fee = 0;
   
   
   
-  function __construct($new_ip_address, $new_sha_hashrate, $new_scrypt_hashrate, $new_skein_hashrate, $new_groestl_hashrate, $new_qubit_hashrate, $new_power_consumption, $new_power_cost, $new_pool_fees)
+  function __construct($new_ip_address, $new_sha_hashrate, $new_scrypt_hashrate, $new_skein_hashrate, $new_groestl_hashrate, $new_qubit_hashrate, $new_power_consumption, $new_power_cost, $new_pool_fee)
   {
     $this->ip_address = $new_ip_address;
     $this->sha_hashrate = $new_sha_hashrate;
@@ -25,7 +25,7 @@ class User
     $this->qubit_hashrate = $new_qubit_hashrate;
     $this->power_consumption = $new_power_consumption;
     $this->power_cost = $new_power_cost;
-    $this->pool_fees = $new_pool_fees;
+    $this->pool_fees = $new_pool_fee;
   }
   
   
@@ -69,9 +69,9 @@ class User
     return $this->power_cost;
   }
   
-  function get_pool_fees()
+  function get_pool_fee()
   {
-    return $this->pool_fees;
+    return $this->pool_fee;
   }
   
   
