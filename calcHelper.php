@@ -1,28 +1,29 @@
 <?php
 
-	$sha_avg_diff = 0;
-	$scrypt_avg_diff = 0;
-	$skein_avg_diff = 0;
-	$groestl_avg_diff = 0;
-	$qubit_avg_diff = 0;
+// Gets the average difficulties for all the algorithms
+function get_avg_diffs($avg)
+{
 
-	$num_avg = 12;
+	$num_avg = $avg;
 	
 	// Establish connection to the database
-	$con=mysqli_connect("127.0.0.1", "root", "pass", "myriadcoin");
+	$con=mysqli_connect("127.0.0.1", "root", "pw", "myriadcoin");
 	
 	if (mysqli_connect_errno()) 
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
+	// Query database for difficulties
 	$result = mysqli_query($con, "SELECT * FROM `difficulties`");
 	
+	// Obtain the number of rows from the result of the query
 	$num_rows = mysqli_num_rows($result);
 	
-	
+	// Will be storing all the rows in here
 	$array_of_rows = array();
 	
+	// Get all the rows
 	for($i = 0; $i < $num_rows; $i++)
 	{
 		$array_of_rows[$i] = mysqli_fetch_array($result);
@@ -36,6 +37,7 @@
 	$groestl_values = array();
 	$qubit_values = array();
 
+	// Get an array of the past N difficulties for each algorithm
 	for($i = ($size_of_array_of_rows - $num_avg); $i < $size_of_array_of_rows; $i++)
 	{
 		$sha_values[$i] = $array_of_rows[$i]["sha"];
@@ -45,27 +47,15 @@
 		$qubit_values[$i] = $array_of_rows[$i]["qubit"];
 	}
 
+	// Calculate the average value of all values in each array, stick the results in an array and return results
+	$diffs = array();
+	$diffs[0] = array_sum($sha_values)/$num_avg;
+	$diffs[1] = array_sum($scrypt_values)/$num_avg;
+	$diffs[2] = array_sum($skein_values)/$num_avg;
+	$diffs[3] = array_sum($groestl_values)/$num_avg;
+	$diffs[4] = array_sum($qubit_values)/$num_avg;
 	
-	$sha_avg_diff = array_sum($sha_values)/$num_avg;
-	$scrypt_avg_diff = array_sum($scrypt_values)/$num_avg;
-	$skein_avg_diff = array_sum($skein_values)/$num_avg;
-	$groestl_avg_diff = array_sum($groestl_values)/$num_avg;
-	$qubit_avg_diff = array_sum($qubit_values)/$num_avg;
-
-	print $sha_avg_diff . "<br/>";
-	print $scrypt_avg_diff . "<br/>";
-	print $skein_avg_diff . "<br/>";
-	print $groestl_avg_diff . "<br/>";
-	print $qubit_avg_diff . "<br/>";
-	
-	// Gives us the most current difficulties
-	/*$row = $array_of_rows[$num_rows - 1];
-		
-	$sha_diff = $row["sha"];
-	$scrypt_diff = $row["scrypt"];
-	$skein_diff = $row["skein"];
-	$groestl_diff = $row["groestl"];
-	$qubit_diff = $row["qubit"];*/
-
+	return $diffs;
+}
 	
 ?>
