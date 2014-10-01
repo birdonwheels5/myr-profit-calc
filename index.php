@@ -6,8 +6,9 @@
 		<title>Wat?</title>
 		<link rel="stylesheet" href="http://birdonwheels5.no-ip.org/css/main.min.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" title="Font Styles"/>
-		<?php include "methodHelper.php";
-			  include "userManager.php"; ?>
+		<?php include "/var/www/myr-insight-stats/methodHelper.php";
+		      include "/var/www/myr-insight-stats/userManager.php"; 
+		      include "calcHelper.php?>
 	</head>
 	
 	<body style="background-color:#f4f4f4;float:left;background-color:white">
@@ -25,11 +26,12 @@
 		
 		// Determine if the user loading the page has been here before.
 		$ip = $_SERVER['REMOTE_ADDR'];
-		$filename = "ip_data.dat";
+		$filename = "/var/www/myr-insight-stats/ip_data.dat";
+		$avg = 24;
 		$separator = "qpwoeiruty";
 		
 		$users = array();
-		$users = read_users("ip_data.dat");
+		$users = read_users($filename);
 		
 		$user_position_in_array = search_ip_address($filename, $users, $ip);
 
@@ -106,10 +108,8 @@
 		}
 		
 		
-		scrape("http://birdonwheels5.no-ip.org:3000/status", "scrape.html");
-		
 		$diff = array();
-		$diff = getDifficulties("scrape.html");
+		$diff = get_avg_diffs($avg);
 		
 		$sha_diff = number_format($diff[0], 2, '.', ',');
 		$sha_net_hashrate = number_format(($diff[0]/34.92331797)/1000, 2, '.', ',');
@@ -210,9 +210,8 @@
 		
 		if($_POST["refresh_values"])
 		{
-		scrape("http://birdonwheels5.no-ip.org:3000/status", "scrape.html");
-		
-		$diff = getDifficulties("scrape.html");
+
+		$diff = get_avg_diffs($avg);
 		
 		$sha_diff = number_format($diff[0], 2, '.', ',');
 		$sha_net_hashrate = number_format(($diff[0]/34.92331797)/1000, 2, '.', ',');
