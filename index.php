@@ -26,7 +26,7 @@
 		// Determine if the user loading the page has been here before.
 		$ip = $_SERVER['REMOTE_ADDR'];
 		$filename = "ip_data.dat";
-		$avg = 12;
+		$avg = 24;
 		$separator = "qpwoeiruty";
 		
 		$users = array();
