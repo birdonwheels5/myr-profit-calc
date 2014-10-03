@@ -95,7 +95,7 @@ function display_ip_info($filename, $array)
 
 // -----------------------------------------------------------------------------------------
 
-function add_user($array, $ip_address)
+function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_hash, $qubit_hash, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost)
 {
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
@@ -114,7 +114,7 @@ function add_user($array, $ip_address)
 }
 // -----------------------------------------------------------------------------------------
 
-function update_user($array, $ip_address)
+function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_hash, $qubit_hash, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost)
 {
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
@@ -134,7 +134,7 @@ function update_user($array, $ip_address)
 }
 // -----------------------------------------------------------------------------------------
 
-function remove_user($array, $ip_address)
+function remove_user($ip_address)
 {
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
