@@ -109,8 +109,10 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
 	$insert = "INSERT INTO `users` (ip_address, sha_hash, scrypt_hash, skein_hash, groestl_hash, qubit_hash, sha_power, scrypt_power, skein_power, groestl_power, qubit_power, sha_hardware, scrypt_hardware, skein_hardware, groestl_hardware, qubit_hardware, sha_poolfee, scrypt_poolfee, skein_poolfee, groestl_poolfee, qubit_poolfee, power_cost) VALUES ('$ip_address', $sha_hash, $scrypt_hash, $skein_hash, $groestl_hash, $qubit_hash, $sha_power, $scrypt_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost)";	
+	
+	$update = "UPDATE `myriadcoin`.`users` SET `ip_address`='" . $ip_address . "', `sha_hash`='" . $sha_hash . "', `scrypt_hash`='" . $scrypt_hash . "', `skein_hash`='" . $skein_hash . "', `groestl_hash`='" . $groestl_hash . "', `qubit_hash`='" . $qubit_hash . "', `sha_power`='" . $sha_power . "', `scrypt_power`='" . $scrypt_power . "', `groestl_power`='" . $groestl_power . "', `qubit_power`='" . $qubit_power . "', `sha_hardware`='" . $sha_hardware . "', `scrypt_hardware`='" . $scrypt_hardware . "', `skein_hardware`='" . $skein_hardware . "', `groestl_hardware`='" . $groestl_hardware . "', `qubit_hardware`='" . $qubit_hardware . "', `sha_poolfee`='" . $sha_poolfee . "', `scrypt_poolfee`='" . $scrypt_poolfee . "', `skein_poolfee`='" . $skein_poolfee . "', `groestl_poolfee`='" . $groestl_poolfee . "', `qubit_poolfee`='" . $qubit_poolfee . "', `power_cost`='" . $power_cost . "'";
 	// Query database to add user
-	if (mysqli_query($con, $insert)) 
+	if (mysqli_query($con, $update)) 
 	{
 		print "Query Successful. <br/>" . mysqli_error();
 	}
