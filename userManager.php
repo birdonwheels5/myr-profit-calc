@@ -1,7 +1,5 @@
 <?php
 
-include "User.php";
-
 function read_users()
 {
 	// Establish connection to the database
