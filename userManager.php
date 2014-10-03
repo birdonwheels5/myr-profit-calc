@@ -84,7 +84,7 @@ function display_ip_info($filename, $array)
 	// $user_count refers to the user's position in the array, not the actual number of users. Add one for the real #
 	$user_count = count($array) - 1;
 	
-	for($i = 1; $i <= $user_count; $i++)
+	for($i = 0; $i <= $user_count; $i++)
 	{
 		print "<b> IP: " . $array[$i]->get_ip_address() . "</b>" . "<br>";
 		print "sha: " . $array[$i]->get_sha_hashrate() . "<br>";
