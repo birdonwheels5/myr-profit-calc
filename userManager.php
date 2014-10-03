@@ -2,163 +2,55 @@
 
 include "User.php";
 
-function read_users($filename)
+function read_users()
 {
-	$debug_mode = false;
-	$separator = "qpwoeiruty";
-
-	$ip_address = "";
-	$sha_hashrate = 0;
-	$scrypt_hashrate = 0;
-	$skein_hashrate = 0;
-	$groestl_hashrate = 0;
-	$qubit_hashrate = 0;
-	$power_consumption = 0;
-	$power_cost = 0;
-	$pool_fee = 0;
+	// Establish connection to the database
+	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
-	$index = 0;
-	
-	$users = array();
-	
-  $handle = fopen($filename, "r") or print ("Error loading users!");
-    	while (($line = fgets($handle)) !== false) 
-    	{
-		
-		// Fetch user information line-by-line, construct the user, then add 1 to user count
-		
-		if (strcmp(stristr($line,"ip: "), $line) == 0)
-		{
-			$ip_address = trim(str_ireplace("ip: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"sha: "), $line) == 0)
-		{
-			$sha_hashrate = trim(str_ireplace("sha: ", "", $line));
-		}
-	
-		if (strcmp(stristr($line,"scrypt: "), $line) == 0)
-		{
-			$scrypt_hashrate = trim(str_ireplace("scrypt: ", "", $line));
-		}
-	
-		if (strcmp(stristr($line,"skein: "), $line) == 0)
-		{
-			$skein_hashrate = trim(str_ireplace("skein: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"groestl: "), $line) == 0)
-		{
-			$groestl_hashrate = trim(str_ireplace("groestl: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"qubit: "), $line) == 0)
-		{
-			$qubit_hashrate = trim(str_ireplace("qubit: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"pcons: "), $line) == 0)
-		{
-			$power_consumption = trim(str_ireplace("pcons: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"pcost: "), $line) == 0)
-		{
-			$power_cost = trim(str_ireplace("pcost: ", "", $line));
-		}
-		
-		if (strcmp(stristr($line,"poolfee: "), $line) == 0)
-		{
-			$pool_fee = trim(str_ireplace("poolfee: ", "", $line));
-		}
-
-		// Check the current line for "qpwoeiruty" which separates users, and create users
-		if (strcmp(stristr($line, $separator), $line) == 0)
-		{
-			// Debug info
-			if ($debug_mode == true)
-			{
-				echo $ip_address;
-    				echo "<br>";
-				echo $sha_hashrate;
-				echo "<br>";
-				echo $scrypt_hashrate;
-				echo "<br>";
-				echo $skein_hashrate;
-				echo "<br>";
-				echo $groestl_hashrate;
-				echo "<br>";
-				echo $qubit_hashrate;
-				echo "<br>";
-				echo $power_consumption;
-				echo "<br>";
-				echo $power_cost;
-				echo "<br>";
-				echo $pool_fee;
-				echo "<br>";
-				echo "---------";
-				echo "<br>";	
-			}
-			
-			$index++;
-			$user = new User($ip_address, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $power_consumption, $power_cost, $pool_fee);
-			$users[$index] = $user;
-		}
+	if (mysqli_connect_errno()) 
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
-	fclose($handle);
-	return $users;
-}
-
-// -----------------------------------------------------------------------------------------
-
-function count_users($filename)
-{
-  $separator = "qpwoeiruty";
-  $index = 0;
 	
-  $handle = fopen($filename, "r") or print ("Error loading users!");
-    	while (($line = fgets($handle)) !== false) 
-    	{
-		// Count the number of $separator's in the users file, as that determines where the user ends
-		if (strcmp(stristr($line, $separator), $line) == 0)
-		{
-			$index++;
-		}
+	// Query database for users
+	$result = mysqli_query($con, "SELECT * FROM `users`");
+	
+	// Obtain the number of rows from the result of the query
+	$num_rows = mysqli_num_rows($result);
+	
+	// Will be storing all the rows in here
+	$array_of_rows = array();
+	
+	// Get all the rows
+	for($i = 0; $i < $num_rows; $i++)
+	{
+		$array_of_rows[$i] = mysqli_fetch_array($result);
 	}
-	fclose($handle);
-	return $index;
+	
+	mysqli_close($con);
+	
+	return $array_of_rows;
 }
 
 // -----------------------------------------------------------------------------------------
 
 // Returns -1 if the ip address supplied cannot be found in the user array.
 // If successful, the number of the user is returned (will always be > 0).
-function search_ip_address($filename, $array, $ip_address)
+function search_ip_address($array, $ip_address)
 {
-	$separator = "qpwoeiruty";
-	
 	$FAILURE = -1;
 	
-	$user_count = count_users($filename);
+	$user_count = count($array);
 	
 	$searchResult = $FAILURE;
 	
 	// Loop through the user array, and look for a match with $ip_address Result. Returns the number of the user in
 	// the array.
-	for($i = 1; $i <= $user_count; $i++)
+	for($i = 0; $i <= $user_count; $i++)
 	{
-		if ($debug_mode == true)
-		{
-			print "User: " . $array[$i]->get_ip_address() . "<br>";
-		}
 		
-		if ((strcmp(stristr($array[$i]->get_ip_address(), $ip_address), $array[$i]->get_ip_address()) == 0))
-		{
-			if ($debug_mode == true)
-			{
-				print "<br>IP match!<br>" . $array[$i]->get_ip_address();
-			}
-			
+		if ((strcmp(stristr($array[$i]["ip_address"], $ip_address), $array[$i]["ip_address"]()) == 0))
+		{	
 			$searchResult = $i;
 		}
 	}
@@ -169,14 +61,14 @@ function search_ip_address($filename, $array, $ip_address)
 // -----------------------------------------------------------------------------------------
 
 // Display a list of the ip addresss of all the users, formatted in HTML.
-function display_ip_addresses($filename, $array)
+function display_ip_addresses($array)
 {
 	
 	$user_count = count_users($filename);
 	
-	for($i = 1; $i <= $user_count; $i++)
+	for($i = 0; $i <= $user_count; $i++)
 	{
-		print $i . ") " . $array[$i]->get_ip_address() . "\n <br/>";
+		print $i . ") " . $array[$i]["user"] . "\n <br/>";
 	}
 }
 
@@ -205,160 +97,62 @@ function display_ip_info($filename, $array)
 
 // -----------------------------------------------------------------------------------------
 
-function remove_user($filename, $array, $user_number)
+function add_user($array, $ip_address)
 {
-	$user_number = (int)$user_number;
-	$debug_mode = false;
-	$separator = "qpwoeiruty";
+	// Establish connection to the database
+	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
-	$line_number = 0;
+	$add = "INSERT INTO `users` (ip_address, sha_hash, scrypt_hash, skein_hash, groestl_hash, qubit_hash, sha_power, scrypt_power, skein_power, groestl_power, qubit_power, sha_hardware, scrypt_hardware, skein_hardware, groestl_hardware, qubit_hardware, sha_poolfee, scrypt_poolfee, skein_poolfee, groestl_poolfee, qubit_poolfee, power_cost) VALUES ip_address='" . $ip_address . "', sha_hash=" . $sha_hash . ", scrypt_hash=" . $scrypt_hash . ", skein_hash=" . $skein_hash . ", groestl_hash=" . $groestl_hash . ", qubit_hash=" . $qubit_hash . ", sha_power=" . $sha_power . ", scrypt_power=" . $scrypt_power . ", groestl_power=" . $groestl_power . ", qubit_power=" . $qubit_power . ", sha_hardware=" . $sha_hardware . ", scrypt_hardware=" . $scrypt_hardware . ", skein_hardware=" . $skein_hardware . ", groestl_hardware=" . $groestl_hardware . ", qubit_hardware=" . $qubit_hardware . ", sha_poolfee=" . $sha_poolfee . ", scrypt_poolfee=" . $scrypt_poolfee . ", skein_poolfee=" . $skein_poolfee . ", groestl_poolfee=" . $groestl_poolfee . ", qubit_poolfee=" . $qubit_poolfee . ", power_cost=" . $power_cost . ")";
 	
-	$SUCCESS = 0;
-	$FAILURE = 1;
-	
-	if ($debug_mode == true)
+	if (mysqli_connect_errno()) 
 	{
-		print "<br> Getting user ip_address...";
-		print $user_number;
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
-	// Get the ip_address of the user we're working with
-	$ip_address = $array[$user_number]->get_ip_address();
+	// Query database for users
+	mysqli_query($con, $delete);
 	
-	if ($debug_mode == true)
-	{
-		print "<br> User IP address is: " . $ip_address;
-	}
-	
-	if ($debug_mode == true)
-	{
-		print "<br> Opening file...";
-	}
-	
-	// Search for the line number where the user's ip_address resides
-	$file = file($filename);
-	
-	if ($debug_mode == true)
-	{
-		print "<br> File Opened!";
-	}
-	
-	// Special case for when the first user needs to be deleted
-	if ($user_number == 1)
-	{
-		$line_number = 0; // This will always be true since the user is at the start of the file
-	}
-	else
-	{
-	for ($i = 0; $i < count($file); $i++)
-	{
-		if ($debug_mode == true)
-		{
-			print "<br> Looking for line number... Current line:  <br>" . $file[$i];
-		}
-		
-		if ((strcmp(stristr($file[$i], $separator), $file[$i]) == 0))
-		{
-			if ($debug_mode == true)
-			{
-				print "<br> Separator found";
-			}
-			
-			if ($debug_mode == true)
-			{
-				print "<br> " . $line_number;
-			}
-			
-			$line_number++; // Keeping track of the separators
-			
-			if ($line_number == ($user_number - 1)) // We want the separator count to equal the user #
-			{
-				$line_number = $i + 1; // Replacing the separator count with the line count of the ip_address
-				if ($debug_mode == true)
-				{
-					print "<br> " . $line_number;
-				}
-				
-				break;
-			}
-		}
-		
-		
-	}
-	}
-	fclose($file);
-	
-	
-	$lines = file($filename);
-
- 		$content;
-		
-		// If the starting line number is not 0, then read the lines up until the line
-		// number into the temp file ($content)
- 		if ($line_number != 0)
- 		{
- 			for ($i = 0; $i < $line_number; $i++)
- 			{
- 				$content .= $lines[$i];
- 			}
- 		}
- 		
- 		$lastLine;
- 		
- 		// Special case for when we remove the first user entry from our users.dat file
- 		if ($line_number == 0)
- 		{
- 			for($i = 0; $i < count($lines); $i++) 
- 		
- 			{ 
- 			
- 				$content .= str_ireplace($lines[$i], "", $lines[$i]);
- 				
- 				if ((strcmp(stristr($lines[$i], $separator), $lines[$i]) == 0))
- 				{
- 					$content .= str_ireplace($lines[$i], "", $lines[$i]);
- 					$lastLine = $i;
- 					break;
- 				}
- 			}
- 			
- 			// Pick up reading into temp file after we've stopped changing the file's contents
- 			for($i = ($lastLine + 1); $i < count($lines); $i++)
- 			{
- 				$content .= $lines[$i];
- 			}
- 		}
- 		else // Same thing, just with changed separator rules for users that are not at line 0
- 		{
- 			for($i = ($line_number); $i < count($lines); $i++) 
- 		
- 			{ 
- 				if ((strcmp(stristr($lines[$i], $separator), $lines[$i]) == 0))
- 				{
- 					$content .= str_ireplace($lines[$i], "", $lines[$i]);
- 					$lastLine = $i;
- 					break;
- 				}
- 				
- 				$content .= str_ireplace($lines[$i], "", $lines[$i]);
- 			}
- 			
- 			for($i = ($lastLine + 1); $i < count($lines); $i++)
- 			{
- 				$content .= $lines[$i];
- 			}
- 		}
-
- 		fclose($lines);
- 		
- 		// Overwrite main file with temp file
- 		$fi = fopen($filename, "w");
- 		fwrite($fi, $content);
- 		fclose($fi);
-	
-	return;
+	mysqli_close($con);
 }
+// -----------------------------------------------------------------------------------------
 
+function update_user($array, $ip_address)
+{
+	// Establish connection to the database
+	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
+	
+	$update = "UPDATE `users` SET sha_hash=" . $sha_hash . ", scrypt_hash=" . $scrypt_hash . ", skein_hash=" . $skein_hash . ", groestl_hash=" . $groestl_hash . ", qubit_hash=" . $qubit_hash . ", sha_power=" . $sha_power . ", scrypt_power=" . $scrypt_power . ", groestl_power=" . $groestl_power . ", qubit_power=" . $qubit_power . ", sha_hardware=" . $sha_hardware . ", scrypt_hardware=" . $scrypt_hardware . ", skein_hardware=" . $skein_hardware . ", groestl_hardware=" . $groestl_hardware . ", qubit_hardware=" . $qubit_hardware . ", sha_poolfee=" . $sha_poolfee . ", scrypt_poolfee=" . $scrypt_poolfee . ", skein_poolfee=" . $skein_poolfee . ", groestl_poolfee=" . $groestl_poolfee . ", qubit_poolfee=" . $qubit_poolfee . ", power_cost=" . $power_cost . " WHERE ip_address=" . $ip_address;
+
+	
+	if (mysqli_connect_errno()) 
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	
+	// Query database to update user
+	mysqli_query($con, $update);
+	
+	mysqli_close($con);
+}
+// -----------------------------------------------------------------------------------------
+
+function remove_user($array, $ip_address)
+{
+	// Establish connection to the database
+	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
+	
+	$delete = "DELETE * FROM `users` WHERE ip_address=". $ip_address;
+	
+	if (mysqli_connect_errno()) 
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	
+	// Query database for users
+	mysqli_query($con, $delete);
+	
+	mysqli_close($con);
+}
 // -----------------------------------------------------------------------------------------
 
 ?>
