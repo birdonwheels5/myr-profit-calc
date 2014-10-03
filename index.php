@@ -246,23 +246,23 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		    Profitability/Day:<br/>Enter your Hashrate<br/>
 		    <input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear"></th>
 		<td>
-		    <input type="text" name="sha" value="<?php echo $sha_input;?>" size="4"><br/>
+		    <input type="text" name="sha" value="<?php echo $sha_hashrate;?>" size="4"><br/>
 		    MYR <br/> (GH/s)
 		    </td>
 		<td>
-		    <input type="text" name="scrypt" value="<?php echo $scrypt_input;?>" size="4"><br/>
+		    <input type="text" name="scrypt" value="<?php echo $scrypt_hashrate;?>" size="4"><br/>
 		    MYR <br/> (MH/s)
 		    </td>
 		<td>
-		    <input type="text" name="skein" value="<?php echo $skein_input;?>" size="4"><br/>
+		    <input type="text" name="skein" value="<?php echo $skein_hashrate;?>" size="4"><br/>
 		    MYR <br/> (MH/s)
 		    </td>
 		<td>
-		    <input type="text" name="groestl" value="<?php echo $groestl_input;?>" size="4"><br/>
+		    <input type="text" name="groestl" value="<?php echo $groestl_hashrate;?>" size="4"><br/>
 		    MYR <br/> (MH/s)
 		    </td>
 		<td>
-		    <input type="text" name="qubit" value="<?php echo $qubit_input;?>" size="4"><br/>
+		    <input type="text" name="qubit" value="<?php echo $qubit_hashrate;?>" size="4"><br/>
 		    MYR <br/> (MH/s)
 		    </form></td>
 	    </tr>
