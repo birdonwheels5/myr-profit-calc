@@ -107,18 +107,15 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
 $add = "INSERT INTO `myriadcoin`.`users` (`ip_address`, `sha_hash`, `scrypt_hash`, `skein_hash`, `groestl_hash`, `qubit_hash`, `sha_power`, `scrypt_power, `skein_power`, `groestl_power`, `qubit_power`, `sha_hardware`, `scrypt_hardware`, `skein_hardware`, `groestl_hardware`, `qubit_hardware`, `sha_poolfee`, `scrypt_poolfee`, `skein_poolfee`, `groestl_poolfee`, `qubit_poolfee`, `power_cost`) VALUES ('" . $ip_address . "', '" . $sha_hash . "', '" . $scrypt_hash . "', '" . $skein_hash . "', '" . $groestl_hash . "', '" . $qubit_hash . "', '" . $sha_power . "', '" . $scrypt_power . "', '" . $groestl_power . "', '" . $qubit_power . "', '" . $sha_hardware . "', '" . $scrypt_hardware . "', '" . $skein_hardware . "', '" . $groestl_hardware . "', '" . $qubit_hardware . "', '" . $sha_poolfee . "', '" . $scrypt_poolfee . "', '" . $skein_poolfee . "', '" . $groestl_poolfee . "', '" . $qubit_poolfee . "', '" . $power_cost . "')";	
-	if (mysqli_connect_errno()) 
+	// Query database to add user
+	if (mysqli_query($con, $add)) 
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	else
 	{
 		print "Query Successful. <br/>";
-		print $ip_address;
 	}
-	
-	// Query database for users
-	mysqli_query($con, $add);
 	
 	mysqli_close($con);
 }
@@ -131,8 +128,8 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	
 	$update = "UPDATE `myriadcoin`.`users` SET sha_hash=" . $sha_hash . ", scrypt_hash=" . $scrypt_hash . ", skein_hash=" . $skein_hash . ", groestl_hash=" . $groestl_hash . ", qubit_hash=" . $qubit_hash . ", sha_power=" . $sha_power . ", scrypt_power=" . $scrypt_power . ", groestl_power=" . $groestl_power . ", qubit_power=" . $qubit_power . ", sha_hardware=" . $sha_hardware . ", scrypt_hardware=" . $scrypt_hardware . ", skein_hardware=" . $skein_hardware . ", groestl_hardware=" . $groestl_hardware . ", qubit_hardware=" . $qubit_hardware . ", sha_poolfee=" . $sha_poolfee . ", scrypt_poolfee=" . $scrypt_poolfee . ", skein_poolfee=" . $skein_poolfee . ", groestl_poolfee=" . $groestl_poolfee . ", qubit_poolfee=" . $qubit_poolfee . ", power_cost=" . $power_cost . " WHERE ip_address=" . $ip_address;
 
-	
-	if (mysqli_connect_errno()) 
+	// Query database to update user
+	if (mysqli_query($con, $update)) 
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -140,9 +137,6 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	{
 		print "Query Successful. <br/>";
 	}
-	
-	// Query database to update user
-	mysqli_query($con, $update);
 	
 	mysqli_close($con);
 }
@@ -155,7 +149,8 @@ function remove_user($ip_address)
 	
 	$delete = "DELETE * FROM `myriadcoin`.`users` WHERE ip_address=". $ip_address;
 	
-	if (mysqli_connect_errno()) 
+	// Query database for users
+	if (mysqli_query($con, $delete)) 
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -163,9 +158,6 @@ function remove_user($ip_address)
 	{
 		print "Query Successful. <br/>";
 	}
-	
-	// Query database for users
-	mysqli_query($con, $delete);
 	
 	mysqli_close($con);
 }
