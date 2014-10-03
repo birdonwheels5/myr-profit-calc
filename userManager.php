@@ -11,7 +11,7 @@ function read_users()
 	}
 	else
 	{
-		print "Query Successful. <br/>";
+		//print "Query Successful. <br/>";
 	}
 	
 	// Query database for users
@@ -114,7 +114,7 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	// Query database to add user
 	if (mysqli_query($con, $update)) 
 	{
-		print "Query Successful. <br/>" . mysqli_error();
+		//print "Query Successful. <br/>" . mysqli_error();
 	}
 	else
 	{
@@ -134,7 +134,7 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	// Query database to update user
 	if (mysqli_query($con, $update)) 
 	{
-		print "Query Successful. <br/>" . mysqli_connect_error();
+		//print "Query Successful. <br/>" . mysqli_connect_error();
 	}
 	else
 	{
@@ -155,7 +155,7 @@ function remove_user($ip_address)
 	// Query database for users
 	if (mysqli_query($con, $delete)) 
 	{
-		print "Query Successful. <br/>" . mysqli_connect_error();
+		//print "Query Successful. <br/>" . mysqli_connect_error();
 	}
 	else
 	{
