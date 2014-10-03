@@ -25,19 +25,16 @@
 		
 		// Determine if the user loading the page has been here before.
 		$ip = $_SERVER['REMOTE_ADDR'];
-		$filename = "ip_data.dat";
+		$user_array = array();
+		$user_array = read_users();
 		$avg = 24;
-		$separator = "qpwoeiruty";
 		
-		$users = array();
-		$users = read_users($filename);
-		
-		$user_position_in_array = search_ip_address($filename, $users, $ip);
+		$user_position_in_array = search_ip_address($user_array, $ip);
 
 		
 		if($user_position_in_array >= 0)
 		{
-			$sha_hashrate = $users[$user_position_in_array]->get_sha_hashrate();
+			$sha_hashrate = $user_array[$user_position_in_array]["sha_hashrate"];
 			$scrypt_hashrate = $users[$user_position_in_array]->get_scrypt_hashrate();
 			$skein_hashrate = $users[$user_position_in_array]->get_skein_hashrate();
 			$groestl_hashrate = $users[$user_position_in_array]->get_groestl_hashrate();
