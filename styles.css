@@ -27,13 +27,19 @@ header
 	white-space:nowrap;
 }
 
-# Unused
 div.logoContainer
 {
 	width:30px;
 	height:50px;
 	float:left;
 	padding:6px;
+}
+
+div.button
+{
+	height:45px;
+	float:right;
+	padding-right:15px;
 }
 
 div.welcome
