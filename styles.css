@@ -5,7 +5,7 @@ body
 	margin:0;
 	color:white;
 	#background-image:url(img/background.png);
-	background-image:url(http://i.imgur.com/TN6ie5q.gif);
+	#background-image:url(http://i.imgur.com/TN6ie5q.gif);
 	#-moz-background-size: cover;
 	#-webkit-background-size: cover;
 	#background-size: cover;
@@ -22,7 +22,7 @@ div.container
 header
 {
 	background-color:#002B6B;
-	height:80px;
+	height:40px;
 	overflow:hidden;
 	white-space:nowrap;
 }
