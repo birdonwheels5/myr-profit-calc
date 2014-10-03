@@ -128,8 +128,7 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
-	$update = "UPDATE `myriadcoin`.`users` SET sha_hash=" . $sha_hash . ", scrypt_hash=" . $scrypt_hash . ", skein_hash=" . $skein_hash . ", groestl_hash=" . $groestl_hash . ", qubit_hash=" . $qubit_hash . ", sha_power=" . $sha_power . ", scrypt_power=" . $scrypt_power . ", groestl_power=" . $groestl_power . ", qubit_power=" . $qubit_power . ", sha_hardware=" . $sha_hardware . ", scrypt_hardware=" . $scrypt_hardware . ", skein_hardware=" . $skein_hardware . ", groestl_hardware=" . $groestl_hardware . ", qubit_hardware=" . $qubit_hardware . ", sha_poolfee=" . $sha_poolfee . ", scrypt_poolfee=" . $scrypt_poolfee . ", skein_poolfee=" . $skein_poolfee . ", groestl_poolfee=" . $groestl_poolfee . ", qubit_poolfee=" . $qubit_poolfee . ", power_cost=" . $power_cost . " WHERE ip_address=" . $ip_address;
-
+	$update = "UPDATE `myriadcoin`.`users` SET `sha_hash`='" . $sha_hash . "', `scrypt_hash`='" . $scrypt_hash . "', `skein_hash`='" . $skein_hash . "', `groestl_hash`='" . $groestl_hash . "', `qubit_hash`='" . $qubit_hash . "', `sha_power`='" . $sha_power . "', `scrypt_power`='" . $scrypt_power . "', `groestl_power`='" . $groestl_power . "', `qubit_power`='" . $qubit_power . "', `sha_hardware`='" . $sha_hardware . "', `scrypt_hardware`='" . $scrypt_hardware . "', `skein_hardware`='" . $skein_hardware . "', `groestl_hardware`='" . $groestl_hardware . "', `qubit_hardware`='" . $qubit_hardware . "', `sha_poolfee`='" . $sha_poolfee . "', `scrypt_poolfee`='" . $scrypt_poolfee . "', `skein_poolfee`='" . $skein_poolfee . "', `groestl_poolfee`='" . $groestl_poolfee . "', `qubit_poolfee`='" . $qubit_poolfee . "', `power_cost`='" . $power_cost . "' WHERE `users`.`ip_address`='" . $ip_address . "'";
 	// Query database to update user
 	if (mysqli_query($con, $update)) 
 	{
@@ -149,7 +148,7 @@ function remove_user($ip_address)
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
-	$delete = "DELETE * FROM `myriadcoin`.`users` WHERE ip_address=". $ip_address;
+	$delete = "DELETE * FROM `myriadcoin`.`users` WHERE `users`.`ip_address`=`". $ip_address . "`";
 	
 	// Query database for users
 	if (mysqli_query($con, $delete)) 
