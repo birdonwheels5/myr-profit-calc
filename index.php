@@ -11,7 +11,7 @@
 		      include "calcHelper.php"; ?>
 	</head>
 	
-	<body style="background-color:#f4f4f4;float:left;background-color:white">
+	<body style="background-color:#f4f4f4;float:left;background-color:white" link="#E2E2E2" vlink="#ADABAB">
 	
 	<header>
 		
