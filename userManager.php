@@ -42,9 +42,8 @@ function search_ip_address($array, $ip_address)
 {
 	$FAILURE = -1;
 	
-	$user_count = count($array);
-	
-	print $user_count;
+	// $user_count refers to the user's position in the array, not the actual number of users. Add one for the real #
+	$user_count = count($array) - 1;
 	
 	$searchResult = $FAILURE;
 	
@@ -67,8 +66,8 @@ function search_ip_address($array, $ip_address)
 // Display a list of the ip addresss of all the users, formatted in HTML.
 function display_ip_addresses($array)
 {
-	
-	$user_count = count_users($filename);
+	// $user_count refers to the user's position in the array, not the actual number of users. Add one for the real #
+	$user_count = count($array) - 1;
 	
 	for($i = 0; $i <= $user_count; $i++)
 	{
@@ -81,8 +80,9 @@ function display_ip_addresses($array)
 // A plain text version of the above function, which displays all info about a given user.
 function display_ip_info($filename, $array)
 {
-	
-	$user_count = count_users($filename);
+
+	// $user_count refers to the user's position in the array, not the actual number of users. Add one for the real #
+	$user_count = count($array) - 1;
 	
 	for($i = 1; $i <= $user_count; $i++)
 	{
