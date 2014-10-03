@@ -112,6 +112,7 @@ $add = "INSERT INTO `myriadcoin`.`users` (`ip_address`, `sha_hash`, `scrypt_hash
 	else
 	{
 		print "Query Successful. <br/>";
+		print $ip_address;
 	}
 	
 	// Query database for users
