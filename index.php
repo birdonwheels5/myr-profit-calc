@@ -12,6 +12,31 @@
 	
 	<body style="background-color:#f4f4f4;float:left;background-color:white">
 	
+	<header>
+		
+				<div class="logoContainer">
+					<!-- <img src="logo-bar.png"> -->
+				</div>
+				
+				<div class="button">
+					<p><a href ="index.html">Home</a></p>
+				</div>
+				
+				<div class="button">
+					<p><a href ="CryptoHub.html">Crypto Hub</a></p>
+				</div>
+				
+				<div class="button">
+					<p><a href ="http://birdstekkit.enjin.com" target="_blank">Minecraft Servers</a></p>
+				</div>
+				
+				<div class="button">
+					<p><a href ="https://birdonwheels5.no-ip.org/index.php">Cloud Server</a></p>
+				</div>
+				
+			</header>
+
+	
 	<?php
 		
 		
