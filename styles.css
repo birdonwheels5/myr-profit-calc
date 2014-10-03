@@ -1,0 +1,159 @@
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	padding:0;
+	margin:0;
+	color:white;
+	#background-image:url(img/background.png);
+	background-image:url(http://i.imgur.com/TN6ie5q.gif);
+	#-moz-background-size: cover;
+	#-webkit-background-size: cover;
+	#background-size: cover;
+	#background-position: top center !important;
+	#background-repeat: no-repeat !important;
+	#background-attachment: fixed;
+}
+
+div.container 
+{
+	width:100%;
+}
+
+header
+{
+	background-color:#002B6B;
+	height:80px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+# Unused
+div.logoContainer
+{
+	width:30px;
+	height:50px;
+	float:left;
+	padding:6px;
+}
+
+div.welcome
+{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:6px;
+	background-color:hsla(0, 0%, 30%, 0.9);
+	-webkit-box-shadow: 3px 3px 5px #888888;
+	-moz-box-shadow: 3px 3px 5px #888888;
+	margin-bottom:25px;
+	padding-left:10px;
+}
+
+nav
+{
+	width:30%;
+	float:left;
+	display:inline;
+	margin:0;
+	padding:0;
+	padding-top:10px;
+	padding-left:10%;
+	padding-right:0%;
+	margin-right:0px;
+	min-height: 100%;
+	height: auto !important;
+    	height: 100%px;
+}
+
+article
+{
+	width:90%;
+	height:40%;
+	text-align:left;
+	padding-left:2%;
+	padding-right:2%;
+}
+
+# Depreciated
+div.status
+{
+	width:60%;
+	height:40%;
+	text-align:left;
+	padding-top:30px;
+	padding-left:2%;
+	padding-right:2%;
+}
+
+div.activeBounty
+{
+	border-radius:6px;
+	width:100%;
+	float:left;
+	background-color:hsla(100, 43%, 65%, 0.7);
+	-webkit-box-shadow: 3px 3px 5px #888888;
+	-moz-box-shadow: 3px 3px 5px #888888;
+	margin-bottom:25px;
+}
+
+div.box
+{
+	width:10%;
+	float:left;
+	padding-right:1%;
+}
+
+div.descBox
+{
+	width:26%;
+	float:left;
+	padding-right:1%;
+}
+
+div.addressBox
+{
+	width:24%;
+	float:left;
+	padding-right:1%;
+	font-size:12px;
+}
+
+div.numberBox
+{
+	width:8%;
+	float:left;
+	padding-right:1%;
+}
+
+div.divider
+{
+	border-radius:6px;
+	width:100%;
+	float:left;
+	background-color:transparent;
+}
+
+div.inActiveBounty
+{
+	border-radius:6px;
+	width:100%;
+	float:left;
+	background-color:hsla(0, 0%, 65%, 0.7);
+	-webkit-box-shadow: 3px 3px 5px #888888;
+	-moz-box-shadow: 3px 3px 5px #888888;
+	margin-bottom:25px;
+}
+
+div.paddingBottom
+{
+	#width:80%;
+	#padding-bottom:1.5%
+}
+
+footer
+{
+	background-color:#626163;
+	width:100%;
+	clear:both;
+	text-align:center;
+}
