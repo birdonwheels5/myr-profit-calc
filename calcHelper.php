@@ -55,6 +55,8 @@ function get_avg_diffs($avg)
 	$diffs[3] = array_sum($groestl_values)/$num_avg;
 	$diffs[4] = array_sum($qubit_values)/$num_avg;
 	
+	mysqli_close($con);
+	
 	return $diffs;
 }
 	
