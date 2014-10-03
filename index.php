@@ -14,14 +14,6 @@
 	
 	<?php
 		
-		// These values are used to compute coins/day for all algos. 
-		// Measured in MH/s and are estimates of 1 Scrypt MH/s
-		//$sha_hashrate = 1; // This one gets multiplied by 1000 later so we can use GH/s instead of MH/s
-		//$scrypt_hashrate = 1;
-		//$skein_hashrate = 280;
-		//$groestl_hashrate = 15;
-		//$qubit_hashrate = 7;
-		
 		
 		// Determine if the user loading the page has been here before.
 		$ip = $_SERVER['REMOTE_ADDR'];
@@ -29,90 +21,69 @@
 		$user_array = read_users();
 		$avg = 24;
 		
+		// Declare variables
+		$diff = array();
+		$diff = get_avg_diffs($avg);
+		
+		$sha_hashrate;
+		$scrypt_hashrate;
+		$skein_hashrate;
+		$groestl_hashrate;
+		$qubit_hashrate;
+			
+		$sha_power;
+		$scrypt_power;
+		$skein_power;
+		$groestl_power;
+		$qubit_power;
+		
+		$sha_hardware;
+		$scrypt_hardware;
+		$skein_hardware;
+		$groestl_hardware;
+		$qubit_hardware;
+			
+		$sha_poolfee;
+		$scrypt_poolfee;
+		$skein_poolfee;
+		$groestl_poolfee;
+		$qubit_poolfee;
+			
+		$power_cost;
+		
+		
+		
 		$user_position_in_array = search_ip_address($user_array, $ip);
 
 		
 		if($user_position_in_array >= 0)
 		{
-			$sha_hashrate = $user_array[$user_position_in_array]["sha_hashrate"];
-			$scrypt_hashrate = $users[$user_position_in_array]->get_scrypt_hashrate();
-			$skein_hashrate = $users[$user_position_in_array]->get_skein_hashrate();
-			$groestl_hashrate = $users[$user_position_in_array]->get_groestl_hashrate();
-			$qubit_hashrate = $users[$user_position_in_array]->get_qubit_hashrate();
-			$power_consumption = $users[$user_position_in_array]->get_power_consumption();
-			$power_cost = $users[$user_position_in_array]->get_power_cost();
-			$pool_fee = $users[$user_position_in_array]->get_pool_fee();
+			$sha_hashrate = $user_array[$user_position_in_array]["sha_hash"];
+			$scrypt_hashrate = $user_array[$user_position_in_array]["scrypt_hash"];
+			$skein_hashrate = $user_array[$user_position_in_array]["skein_hash"];
+			$groestl_hashrate = $user_array[$user_position_in_array]["groestl_hash"];
+			$qubit_hashrate = $user_array[$user_position_in_array]["qubit_hash"];
 			
-			// -----------------------
+			$sha_power = $user_array[$user_position_in_array]["sha_power"];
+			$scrypt_power = $user_array[$user_position_in_array]["scrypt_power"];
+			$skein_power = $user_array[$user_position_in_array]["skein_power"];
+			$groestl_power = $user_array[$user_position_in_array]["groestl_power"];
+			$qubit_power = $user_array[$user_position_in_array]["qubit_power"];
 			
-			if($sha_hashrate == 1)
-			{
-				$sha_input = "";
-			}
-			else
-			{
-				$sha_input = $sha_hashrate;
-			}
+			$sha_hardware = $user_array[$user_position_in_array]["sha_hardware"];
+			$scrypt_hardware = $user_array[$user_position_in_array]["scrypt_hardware"];
+			$skein_hardware = $user_array[$user_position_in_array]["skein_hardware"];
+			$groestl_hardware = $user_array[$user_position_in_array]["groestl_hardware"];
+			$qubit_hardware = $user_array[$user_position_in_array]["qubit_hardware"];
 			
-			if($scrypt_hashrate == 1)
-			{
-				$scrypt_input = "";
-			}
-			else
-			{
-				$scrypt_input = $scrypt_hashrate;
-			}
+			$sha_poolfee = $user_array[$user_position_in_array]["sha_poolfee"];
+			$scrypt_poolfee = $user_array[$user_position_in_array]["scrypt_poolfee"];
+			$skein_poolfee = $user_array[$user_position_in_array]["skein_poolfee"];
+			$groestl_poolfee = $user_array[$user_position_in_array]["groestl_poolfee"];
+			$qubit_poolfee = $user_array[$user_position_in_array]["qubit_poolfee"];
 			
-			if($skein_hashrate == 1)
-			{
-				$skein_input = "";
-			}
-			else
-			{
-				$skein_input = $skein_hashrate;
-			}
-			
-			if($groestl_hashrate == 1)
-			{
-				$groestl_input = "";
-			}
-			else
-			{
-				$groestl_input = $groestl_hashrate;
-			}
-			
-			if($qubit_hashrate == 1)
-			{
-				$qubit_input = "";
-			}
-			else
-			{
-				$qubit_input = $qubit_hashrate;
-			}
+			$power_cost = $user_array[$user_position_in_array]["power_cost"];
 		}
-		else if($user_position_in_array == -1)
-		{
-			$sha_hashrate = 1; // This one gets multiplied by 1000 later so we can use GH/s instead of MH/s
-			$sha_input = "";
-			$scrypt_hashrate = 1; // Scrypt MH/s
-			$scrypt_input = "";
-			$skein_hashrate = 1; // Skein MH/s
-			$skein_input = "";
-			$groestl_hashrate = 1; // Groestl MH/s
-			$groestl_input = "";
-			$qubit_hashrate = 1; // Qubit MH/s
-			$qubit_input = "";
-			
-			$power_consumption = 0;
-			$power_cost = 0;
-			$pool_fee = 0;
-			
-			file_put_contents($filename, "ip: " . $ip . "\n" . "sha: " . $sha_hashrate  . "\n" . "scrypt: " . $scrypt_hashrate . "\n" . "skein: " . $skein_hashrate . "\n" . "groestl: " . $groestl_hashrate . "\n" . "qubit: " . $qubit_hashrate . "\n" . "pcons: " . $power_consumption . "\n" . "pcost: " . $power_cost . "\n" . "poolfee: " . $pool_fee . "\n" .  $separator . "\n", FILE_APPEND);
-		}
-		
-		
-		$diff = array();
-		$diff = get_avg_diffs($avg);
 		
 		$sha_diff = number_format($diff[0], 2, '.', ',');
 		$sha_net_hashrate = number_format(($diff[0]/34.92331797)/1000, 2, '.', ',');
