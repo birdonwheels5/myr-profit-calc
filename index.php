@@ -27,31 +27,31 @@
 		$diff = array();
 		$diff = get_avg_diffs($avg);
 		
-		$sha_hashrate = 0;
-		$scrypt_hashrate = 0;
-		$skein_hashrate = 0;
-		$groestl_hashrate = 0;
-		$qubit_hashrate = 0;
+		$sha_hashrate = "";
+		$scrypt_hashrate = "";
+		$skein_hashrate = "";
+		$groestl_hashrate = "";
+		$qubit_hashrate = "";
 			
-		$sha_power = 0;
-		$scrypt_power = 0;
-		$skein_power = 0;
-		$groestl_power = 0;
-		$qubit_power = 0;
+		$sha_power = "";
+		$scrypt_power = "";
+		$skein_power = "";
+		$groestl_power = "";
+		$qubit_power = "";
 		
-		$sha_hardware = 0;
-		$scrypt_hardware = 0;
-		$skein_hardware = 0;
-		$groestl_hardware = 0;
-		$qubit_hardware = 0;
+		$sha_hardware = "";
+		$scrypt_hardware = "";
+		$skein_hardware = "";
+		$groestl_hardware = "";
+		$qubit_hardware = "";
 			
-		$sha_poolfee = 0;
-		$scrypt_poolfee = 0;
-		$skein_poolfee = 0;
-		$groestl_poolfee = 0;
-		$qubit_poolfee = 0;
+		$sha_poolfee = "";
+		$scrypt_poolfee = "";
+		$skein_poolfee = "";
+		$groestl_poolfee = "";
+		$qubit_poolfee = "";
 			
-		$power_cost = 0;
+		$power_cost = "";
 		
 		
 		
