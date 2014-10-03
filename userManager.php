@@ -108,7 +108,7 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	}
 	
 	// Query database for users
-	mysqli_query($con, $delete);
+	mysqli_query($con, $add);
 	
 	mysqli_close($con);
 }
