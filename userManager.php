@@ -58,7 +58,7 @@ function search_ip_address($array, $ip_address)
 		}
 	}
 	
-	print $array[$i]["qubit_hash"];
+	print $array[$searchResult]["qubit_hash"];
 	
 	return $searchResult;
 }
