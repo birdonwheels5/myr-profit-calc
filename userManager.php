@@ -112,11 +112,11 @@ $add = "INSERT INTO `myriadcoin`.`users` (`ip_address`, `sha_hash`, `scrypt_hash
 	// Query database to add user
 	if (mysqli_query($con, $add)) 
 	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		print "Query Successful. <br/>" . mysqli_connect_error();
 	}
 	else
 	{
-		print "Query Successful. <br/>";
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
 	mysqli_close($con);
@@ -132,11 +132,11 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	// Query database to update user
 	if (mysqli_query($con, $update)) 
 	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		print "Query Successful. <br/>" . mysqli_connect_error();
 	}
 	else
 	{
-		print "Query Successful. <br/>";
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
 	mysqli_close($con);
@@ -153,11 +153,11 @@ function remove_user($ip_address)
 	// Query database for users
 	if (mysqli_query($con, $delete)) 
 	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		print "Query Successful. <br/>" . mysqli_connect_error();
 	}
 	else
 	{
-		print "Query Successful. <br/>";
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
 	mysqli_close($con);
