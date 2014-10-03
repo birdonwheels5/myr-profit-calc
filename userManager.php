@@ -44,6 +44,8 @@ function search_ip_address($array, $ip_address)
 	
 	$user_count = count($array);
 	
+	print $user_count;
+	
 	$searchResult = $FAILURE;
 	
 	// Loop through the user array, and look for a match with $ip_address Result. Returns the number of the user in
