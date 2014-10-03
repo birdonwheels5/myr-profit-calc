@@ -52,13 +52,13 @@ function search_ip_address($array, $ip_address)
 	for($i = 0; $i <= $user_count; $i++)
 	{
 		
-		print $array[$i]["qubit_hash"];
-		
 		if ((strcmp(stristr($array[$i]["ip_address"], $ip_address), $array[$i]["ip_address"]) == 0))
 		{	
 			$searchResult = $i;
 		}
 	}
+	
+	print $array[$i]["qubit_hash"];
 	
 	return $searchResult;
 }
