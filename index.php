@@ -46,7 +46,6 @@
 		$user_array = array();
 		$user_array = read_users();
 		
-		var_dump($user_array);
 		$avg = 24;
 		
 		// Declare variables
