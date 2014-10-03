@@ -178,16 +178,11 @@
 		
 		if($_POST["clear"])
 		{
-			$sha_hashrate = 1;
-			$sha_input = "";
-			$scrypt_hashrate = 1;
-			$scrypt_input = "";
-			$skein_hashrate = 1;
-			$skein_input = "";
-			$groestl_hashrate = 1;
-			$groestl_input = "";
-			$qubit_hashrate = 1;
-			$qubit_input = "";
+			$sha_hashrate = "";
+			$scrypt_hashrate = "";
+			$skein_hashrate = "";
+			$groestl_hashrate = "";
+			$qubit_hashrate = "";
 			
 			calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
 		}
