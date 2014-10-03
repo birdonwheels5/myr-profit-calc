@@ -9,6 +9,10 @@ function read_users()
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
+	else
+	{
+		print "Query Successful. <br/>";
+	}
 	
 	// Query database for users
 	$result = mysqli_query($con, "SELECT * FROM `myriadcoin`.`users`");
@@ -106,6 +110,10 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
+	else
+	{
+		print "Query Successful. <br/>";
+	}
 	
 	// Query database for users
 	mysqli_query($con, $add);
@@ -126,6 +134,10 @@ function update_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
+	else
+	{
+		print "Query Successful. <br/>";
+	}
 	
 	// Query database to update user
 	mysqli_query($con, $update);
@@ -144,6 +156,10 @@ function remove_user($ip_address)
 	if (mysqli_connect_errno()) 
 	{
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	else
+	{
+		print "Query Successful. <br/>";
 	}
 	
 	// Query database for users
