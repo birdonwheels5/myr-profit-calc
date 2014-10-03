@@ -108,9 +108,9 @@ function add_user($ip_address, $sha_hash, $scrypt_hash, $skein_hash, $groestl_ha
 	// Establish connection to the database
 	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
 	
-	$add = "INSERT INTO `myriadcoin`.`users` (`ip_address`, `sha_hash`, `scrypt_hash`, `skein_hash`, `groestl_hash`, `qubit_hash`, `sha_power`, `scrypt_power, `skein_power`, `groestl_power`, `qubit_power`, `sha_hardware`, `scrypt_hardware`, `skein_hardware`, `groestl_hardware`, `qubit_hardware`, `sha_poolfee`, `scrypt_poolfee`, `skein_poolfee`, `groestl_poolfee`, `qubit_poolfee`, `power_cost`) VALUES ('" . $ip_address . "', '" . $sha_hash . "', '" . $scrypt_hash . "', '" . $skein_hash . "', '" . $groestl_hash . "', '" . $qubit_hash . "', '" . $sha_power . "', '" . $scrypt_power . "', '" . $groestl_power . "', '" . $qubit_power . "', '" . $sha_hardware . "', '" . $scrypt_hardware . "', '" . $skein_hardware . "', '" . $groestl_hardware . "', '" . $qubit_hardware . "', '" . $sha_poolfee . "', '" . $scrypt_poolfee . "', '" . $skein_poolfee . "', '" . $groestl_poolfee . "', '" . $qubit_poolfee . "', '" . $power_cost . "')";	
+	$insert = "INSERT INTO `myriadcoin`.`users` (`ip_address`, `sha_hash`, `scrypt_hash`, `skein_hash`, `groestl_hash`, `qubit_hash`, `sha_power`, `scrypt_power, `skein_power`, `groestl_power`, `qubit_power`, `sha_hardware`, `scrypt_hardware`, `skein_hardware`, `groestl_hardware`, `qubit_hardware`, `sha_poolfee`, `scrypt_poolfee`, `skein_poolfee`, `groestl_poolfee`, `qubit_poolfee`, `power_cost`) VALUES ('" . $ip_address . "', '" . $sha_hash . "', '" . $scrypt_hash . "', '" . $skein_hash . "', '" . $groestl_hash . "', '" . $qubit_hash . "', '" . $sha_power . "', '" . $scrypt_power . "', '" . $groestl_power . "', '" . $qubit_power . "', '" . $sha_hardware . "', '" . $scrypt_hardware . "', '" . $skein_hardware . "', '" . $groestl_hardware . "', '" . $qubit_hardware . "', '" . $sha_poolfee . "', '" . $scrypt_poolfee . "', '" . $skein_poolfee . "', '" . $groestl_poolfee . "', '" . $qubit_poolfee . "', '" . $power_cost . "')";	
 	// Query database to add user
-	if (mysqli_query($con, $add)) 
+	if (mysqli_query($con, $insert)) 
 	{
 		print "Query Successful. <br/>" . mysqli_error();
 	}
