@@ -1,4 +1,21 @@
+ip: 5.29.151.182
+sha: 1
+scrypt: 1
+skein: 1
+groestl: 1
+qubit: 1
+pcons: 0
+pcost: 0
+poolfee: 0
+qpwoeiruty
 ip: 192.168.1.1
+sha: 4.3
+scrypt: .377
+skein: 55
+groestl: 12.5
+qubit: 4.3
+qpwoeiruty
+ip: 173.244.15.71
 sha: 1
 scrypt: 1
 skein: 1
