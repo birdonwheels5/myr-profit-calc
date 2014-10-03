@@ -161,15 +161,9 @@
 		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
 		
 		
-		if($is_ip_unique == false)
+		if($is_ip_unique == false and search_ip_address($user_array, $ip) >= 0)
 		{
-			if($sha_hashrate != $users[$user_position_in_array]["sha_hash"] or $scrypt_hashrate != $users[$user_position_in_array]->get_scrypt_hashrate() or $skein_hashrate != $users[$user_position_in_array]->get_skein_hashrate() or $groestl_hashrate != $users[$user_position_in_array]->get_groestl_hashrate() or $qubit_hashrate != $users[$user_position_in_array]->get_qubit_hashrate())
-			{
-				if(search_ip_address($user_array, $ip) >= 0)
-				{
-					update_user($ip_address, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
-				}
-			}
+			update_user($ip_address, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
 		}
 		else
 		{
