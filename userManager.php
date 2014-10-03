@@ -47,7 +47,7 @@ function search_ip_address($array, $ip_address)
 	for($i = 0; $i <= $user_count; $i++)
 	{
 		
-		if ((strcmp(stristr($array[$i]["ip_address"], $ip_address), $array[$i]["ip_address"]()) == 0))
+		if ((strcmp(stristr($array[$i]["ip_address"], $ip_address), $array[$i]["ip_address"]) == 0))
 		{	
 			$searchResult = $i;
 		}
