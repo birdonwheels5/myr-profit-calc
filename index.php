@@ -427,7 +427,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					&nbsp;
 				</td>
 				<td>
-					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
+					<input type="submit" name="submit" value="Submit">
 				</td>
 				<td>
 					&nbsp;
