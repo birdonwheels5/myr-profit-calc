@@ -231,7 +231,7 @@
 	
 		<div class="container" style="width:100%;float:left;">
 			
-			<article>
+			<center><article>
 				<p>
 					<!-- <center><img src="logo_big.png"></center> Insert Main Logo here -->
 						
@@ -267,6 +267,12 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 	
 	<div class="box">
 	Qubit
+	</div>
+	
+	<br/>
+	
+	<div class="box">
+	Number
 	</div>
 	  
 	</form>
