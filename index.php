@@ -128,57 +128,57 @@
 		{
 			
 			
-			if(is_numeric($_POST["sha"]) == false or empty($_POST["sha"]))
+			if(is_numeric($_POST["sha_hash"]) == false or empty($_POST["sha_hash"]))
 			{
 				$sha_hashrate = "";
 			}
 			else
 			{
-				$sha_hashrate = $_POST["sha"]; // Multiplied later to be in GH/s
+				$sha_hashrate = $_POST["sha_hash"]; // Multiplied later to be in GH/s
 				$sha_input = $sha_hashrate;
 			}
 			
 
-			if(is_numeric($_POST["scrypt"]) == false or empty($_POST["scrypt"]))
+			if(is_numeric($_POST["scrypt_hash"]) == false or empty($_POST["scrypt_hash"]))
 			{
 				$scrypt_hashrate = "";
 			}
 			else
 			{
-				$scrypt_hashrate = $_POST["scrypt"];
+				$scrypt_hashrate = $_POST["scrypt_hash"];
 				$scrypt_input = $scrypt_hashrate;
 			}
 			
 
-			if(is_numeric($_POST["skein"]) == false or empty($_POST["skein"]))
+			if(is_numeric($_POST["skein_hash"]) == false or empty($_POST["skein_hash"]))
 			{
 				$skein_hashrate = "";
 			}
 			else
 			{
-				$skein_hashrate = $_POST["skein"];
+				$skein_hashrate = $_POST["skein_hash"];
 				$skein_input = $skein_hashrate;
 			}
 			
 
-			if(is_numeric($_POST["groestl"]) == false or empty($_POST["groestl"]))
+			if(is_numeric($_POST["groestl_hash"]) == false or empty($_POST["groestl_hash"]))
 			{
 				$groestl_hashrate = "";
 			}
 			else
 			{
-				$groestl_hashrate = $_POST["groestl"];
+				$groestl_hashrate = $_POST["groestl_hash"];
 				$groestl_input = $groestl_hashrate;
 			}
 			
 
-			if(is_numeric($_POST["qubit"]) == false or empty($_POST["qubit"]))
+			if(is_numeric($_POST["qubit_hash"]) == false or empty($_POST["qubit_hash"]))
 			{
 				$qubit_hashrate = "";
 			}
 			else
 			{
-				$qubit_hashrate = $_POST["qubit"];
+				$qubit_hashrate = $_POST["qubit_hash"];
 				$qubit_input = $qubit_hashrate;
 			}
 			
@@ -187,11 +187,17 @@
 		
 		if(search_ip_address($user_array, $ip) >= 0)
 		{
-			update_user($ip, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
+			update_user($ip, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, 
+			$sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, 
+			$skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, 
+			$groestl_poolfee, $qubit_poolfee, $power_cost);
 		}
 		else
 		{
-			add_user($ip, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, $sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
+			add_user($ip, $sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, 
+			$sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, $sha_hardware, 
+			$scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, 
+			$skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
 		}
 		
 		if($_POST["clear"])
@@ -202,7 +208,8 @@
 			$groestl_hashrate = "";
 			$qubit_hashrate = "";
 			
-			calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
+			calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, 
+			$qubit_hashrate);
 		}
 }
 
@@ -237,69 +244,20 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 
         <p><h3>Algorithm Statistics:</h3> 
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		    <input type="submit" name="refresh_values" value="Refresh Values">
-		    
-	  <table class="table">	
-	    <tr>
-		<td>Algorithm: </td>
-		<td><b>Sha256</b></td>
-		<td><b>Scrypt</b></td>
-		<td><b>Skein</b></td>
-		<td><b>Groestl</b></td>
-		<td><b>Qubit</b></td>
-	    </tr>
-	    <tr>
-		<th>Average Difficulty:</th>
-		<td ><?php print $sha_diff; ?></td>
-		<td><?php print $scrypt_diff; ?></td>
-		<td><?php print $skein_diff; ?></td>
-		<td><?php print $groestl_diff; ?></td>
-		<td><?php print $qubit_diff; ?></td>
-	    </tr>
-	   <tr>
-		<th>Profitability/Day:<br/>
-		    (Defaults to MYR per MH/s of the algo.)</th>
-		<td><?php print $sha_profit; ?> MYR/GH/s</td>
-		<td><?php print $scrypt_profit; ?> MYR/Scrypt MH/s</td>
-		<td><?php print $skein_profit; ?> MYR/Skein MH/s</td>
-		<td><?php print $groestl_profit; ?> MYR/Groestl MH/s</td>
-		<td><?php print $qubit_profit; ?> MYR/Qubit MH/s</td>
-	    </tr>
-	    
-	    <tr>
-		<th>
-		    Profitability/Day:<br/>Enter your Hashrate<br/>
-		    <input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear"></th>
-		<td>
-		    <input type="text" name="sha" value="<?php echo $sha_hashrate;?>" size="4"><br/>
-		    MYR <br/> (GH/s)
-		    </td>
-		<td>
-		    <input type="text" name="scrypt" value="<?php echo $scrypt_hashrate;?>" size="4"><br/>
-		    MYR <br/> (MH/s)
-		    </td>
-		<td>
-		    <input type="text" name="skein" value="<?php echo $skein_hashrate;?>" size="4"><br/>
-		    MYR <br/> (MH/s)
-		    </td>
-		<td>
-		    <input type="text" name="groestl" value="<?php echo $groestl_hashrate;?>" size="4"><br/>
-		    MYR <br/> (MH/s)
-		    </td>
-		<td>
-		    <input type="text" name="qubit" value="<?php echo $qubit_hashrate;?>" size="4"><br/>
-		    MYR <br/> (MH/s)
-		    </form></td>
-	    </tr>
-<!--	    <tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-	    </tr> -->
-	</table>
+
+	<div class="box">
+	
+	</div>
+	
+	<div class="box">
+	
+	</div>
+	
+	<div class="box">
+	
+	</div>
+	  
+	</form>
 
 </p>
 
