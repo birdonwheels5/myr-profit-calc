@@ -8,10 +8,10 @@ body
 	background-image:url(http://i.imgur.com/TN6ie5q.gif);
 	#-moz-background-size: cover;
 	#-webkit-background-size: cover;
-	#background-size: cover;
-	#background-position: top center !important;
-	#background-repeat: no-repeat !important;
-	#background-attachment: fixed;
+	background-size: cover;
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
 }
 
 div.container 
