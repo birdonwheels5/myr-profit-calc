@@ -246,9 +246,9 @@
 				// 		  Units:     Sec    	Diff	   ???	       hashrate MH/s
 			$sha_blocks_per_day = (86400 / (($sha_diff * pow(2, 32)) / (($sha_hashrate * 1000) * $hash_multiplier)));
 			$scrypt_blocks_per_day = (86400 / (($scrypt_diff * pow(2, 32)) / ($scrypt_hashrate * $hash_multiplier)));
-			$skein_blocks_per_day = (86400 / (($skein_diff * pow(2, 32)) / ($skein_hashrate * $hash_multiplier)))
-			$groestl_blocks_per_day = (86400 / (($groestl_diff * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier)))
-			$qubit_blocks_per_day = (86400 / (($diff[4] * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier)))
+			$skein_blocks_per_day = (86400 / (($skein_diff * pow(2, 32)) / ($skein_hashrate * $hash_multiplier)));
+			$groestl_blocks_per_day = (86400 / (($groestl_diff * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier)));
+			$qubit_blocks_per_day = (86400 / (($diff[4] * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier)));
 			
 			// Blocks per day
 			$sha_values[0] = number_format($sha_blocks_per_day, 2, '.', ',');
