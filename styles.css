@@ -55,16 +55,18 @@ div.welcome
 	padding-left:10px;
 }
 
-tr
+div.trBorder
 {
 	padding-bottom:10px;
-	border:solid;
+	border-style:solid;
+	border-width:1px;
 }
 
-td
+div.tdBorder
 {
 	padding-right:10px;
-	border:solid;
+	border-style:solid;
+	border-width:1px;
 
 nav
 {
