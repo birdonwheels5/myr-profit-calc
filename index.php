@@ -523,6 +523,26 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		<table class="mainTable">
 			<tr>
 				<td>
+					<b>Results: </b>
+				<td/>
+				<td>
+					<b>Sha256d</b>
+				<td/>
+				<td>
+					<b>Scrypt</b>
+				<td/>
+				<td>
+					<b>Skein</b>
+				<td/>
+				<td>
+					<b>Groestl</b>
+				<td/>
+				<td>
+					<b>Qubit</b>
+				<td/>
+			</tr>
+			<tr>
+				<td>
 					Blocks Per Day: 
 				<td/>
 				<td>
