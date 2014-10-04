@@ -112,7 +112,14 @@ div.subTable
     height:40%;
 }
 
-#div.mainTable, div.subTable, td, th
+div.resultsTable
+{
+    border-collapse: collapse;
+    width:100%;
+    height:80%;
+}
+
+#div.resultsTable, td, th
 #{
 #    border: 1px solid black;
 #}
