@@ -119,7 +119,7 @@ div.resultsTable
     height:80%;
 }
 
-div.resultsTable, td, th
+div.resultsTable, td
 {
     border: 1px solid black;
 }
