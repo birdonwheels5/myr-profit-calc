@@ -55,10 +55,10 @@ div.welcome
 	padding-left:10px;
 }
 
-div.p
+tr
 {
 	#padding-bottom:10px;
-	border-style:none none solid none;
+	border-style:none none none solid;
 	border-width:1px;
 }
 
