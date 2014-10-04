@@ -566,19 +566,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					BTC Equivalent: 
 				<td/>
 				<td>
-					<?php print $results[0][2]; ?> ฿
+					<?php print $results[0][2]; ?> BTC
 				<td/>
 				<td>
-					<?php print $results[1][2]; ?> ฿
+					<?php print $results[1][2]; ?> BTC
 				<td/>
 				<td>
-					<?php print $results[2][2]; ?> ฿
+					<?php print $results[2][2]; ?> BTC
 				<td/>
 				<td>
-					<?php print $results[3][2]; ?> ฿
+					<?php print $results[3][2]; ?> BTC
 				<td/>
 				<td>
-					<?php print $results[4][2]; ?> ฿
+					<?php print $results[4][2]; ?> BTC
 				<td/>
 			</tr>
 			<tr>
