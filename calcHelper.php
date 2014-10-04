@@ -68,7 +68,7 @@ function get_myr_price()
 	
 	$json = json_decode(stream_get_contents($url));
 	
-	$myr_price = $json->["lasttradeprice"];
+	$myr_price = $json->{"lasttradeprice"};
 	
 	return $myr_price;
 }
@@ -81,7 +81,7 @@ function get_btc_price()
 	
 	$json = json_decode(stream_get_contents($url));
 	
-	$btc_price = $json->["ask"];
+	$btc_price = $json->{"ask"};
 	
 	return $btc_price;
 }
