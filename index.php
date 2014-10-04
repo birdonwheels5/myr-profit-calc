@@ -318,11 +318,11 @@
 			$qubit_values[5] = number_format((($qubit_power * 24)/1000) * $power_cost, 2, '.', ',');
 			
 			// Total profit made
-			$sha_values[6] = $sha_values[3] - $sha_values[5];
-			$scrypt_values[6] = $scrypt_values[3] - $scrypt_values[5];
-			$skein_values[6] = $skein_values[3] - $skein_values[5];
-			$groestl_values[6] = $groestl_values[3] - $groestl_values[5];
-			$qubit_values[6] = $qubit_values[3] - $qubit_values[5];
+			$sha_values[6] = number_format($sha_values[3] - $sha_values[5], 2, '.', ',');
+			$scrypt_values[6] = number_format($scrypt_values[3] - $scrypt_values[5], 2, '.', ',');
+			$skein_values[6] = number_format($skein_values[3] - $skein_values[5], 2, '.', ',');
+			$groestl_values[6] = number_format($groestl_values[3] - $groestl_values[5, 2, '.', ',')];
+			$qubit_values[6] = number_format($qubit_values[3] - $qubit_values[5], 2, '.', ',');
 			
 			// Time to ROI
 			$sha_values[7] = number_format($sha_hardware/$sha_values[6], 2, '.', ',');
