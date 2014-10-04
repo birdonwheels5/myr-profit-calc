@@ -118,7 +118,31 @@
 			
 			// Now to set fields to blank if they are 0...
 			
+			$sha_hashrate = check_zero($sha_hashrate);
+			$scrypt_hashrate = check_zero($scrypt_hashrate);
+			$skein_hashrate = check_zero($skein_hashrate);
+			$groestl_hashrate = check_zero($groestl_hashrate);
+			$qubit_hashrate = check_zero($qubit_hashrate);
 			
+			$sha_power = check_zero($sha_power);
+			$scrypt_power = check_zero($scrypt_power);
+			$skein_power = check_zero($skein_power);
+			$groestl_power = check_zero($groestl_power);
+			$qubit_power = check_zero($qubit_power);
+			
+			$sha_hardware = check_zero($sha_hardware);
+			$scrypt_hardware = check_zero($scrypt_hardware);
+			$skein_hardware = check_zero($skein_hardware);
+			$groestl_hardware = check_zero($groestl_hardware);
+			$qubit_hardware = check_zero($qubit_hardware);
+			
+			$sha_poolfee = check_zero($sha_poolfee);
+			$scrypt_poolfee = check_zero($scrypt_poolfee);
+			$skein_poolfee = check_zero($skein_poolfee);
+			$groestl_poolfee = check_zero($groestl_poolfee);
+			$qubit_poolfee = check_zero($qubit_poolfee);
+			
+			$power_cost = check_zero($power_cost);
 		}
 		
 		$sha_diff = number_format($diff[0], 2, '.', '');
@@ -236,6 +260,17 @@
 			$skein_profit = number_format((86400 / (($diff[2] * pow(2, 32)) / ($skein_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
 			$groestl_profit = number_format((86400 / (($diff[3] * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
 			$qubit_profit = number_format((86400 / (($diff[4] * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
+		}
+		
+		// Used to replace 0's with an empty string for ease of user input
+		function check_zero($number)
+		{
+			if($number == 0)
+			{
+				$number = "";
+			}
+			
+			return $number;
 		}
 	?>
 	
