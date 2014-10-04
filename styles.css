@@ -102,9 +102,9 @@ div.status
 
 div.box
 {
-	width:14%;
+	width:15%;
 	float:left;
-	padding-right:1%;
+	#padding-right:1%;
 }
 
 div.paddingBottom
