@@ -145,6 +145,11 @@
 		
 		if ($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
+			$sha_diff = check_post($_POST["sha_diff"], $sha_diff);
+			$scrypt_diff = check_post($_POST["scrypt_diff"], $scrypt_diff);
+			$skein_diff = check_post($_POST["skein_diff"], $skein_diff);
+			$groestl_diff = check_post($_POST["groestl_diff"], $groestl_diff);
+			$qubit_diff = check_post($_POST["qubit_diff"], $qubit_diff);
 			
 			$sha_hashrate = check_post($_POST["sha_hash"], $sha_hashrate);
 			$scrypt_hashrate = check_post($_POST["scrypt_hash"], $scrypt_hashrate);
@@ -229,6 +234,23 @@
 			$qubit_poolfee = "";
 			
 			$power_cost = "";
+			
+			$myr_price = get_myr_price();
+			
+			$btc_price = get_btc_price();
+			
+			$coins_per_block = get_block_value();
+			
+			$results = calculate();
+		}
+		
+		if($_POST["reset"])
+		{
+			$sha_diff = number_format($diff[0], 2, '.', '');
+			$scrypt_diff = number_format($diff[1], 2, '.', '');
+			$skein_diff = number_format($diff[2], 2, '.', '');
+			$groestl_diff = number_format($diff[3], 2, '.', '');
+			$qubit_diff = number_format($diff[4], 2, '.', '');
 			
 			$myr_price = get_myr_price();
 			
@@ -541,7 +563,7 @@
 		<table class="mainTable">
 			<tr>
 				<td>
-					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
+					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear"><input type="submit" name="reset" value="Reset Price/Difficulty">
 				</td>
 			</tr>
 		</table>
