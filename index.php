@@ -52,6 +52,12 @@
 		$diff = array();
 		$diff = get_avg_diffs($avg);
 		
+		$sha_difficulty = $diff[0];
+		$scrypt_difficulty = $diff[1];
+		$skein_difficulty = $diff[2];
+		$groestl_difficulty = $diff[3];
+		$qubit_difficulty = $diff[4];
+		
 		$sha_hashrate = "";
 		$scrypt_hashrate = "";
 		$skein_hashrate = "";
@@ -273,19 +279,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Difficulty: (24 hr average)
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $sha_difficulty;?>" size="4">
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $scrypt_difficulty;?>" size="4">
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $skein_difficulty;?>" size="4">
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $groestl_difficulty;?>" size="4">
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $qubit_difficulty;?>" size="4">
 				<td/>
 			</tr>
 			<tr>
