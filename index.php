@@ -231,7 +231,7 @@
 	
 		<div class="container" style="width:100%;float:left;">
 			
-			<center><article>
+			<article style="margin:auto;">
 				<p>
 					<!-- <center><img src="logo_big.png"></center> Insert Main Logo here -->
 						
