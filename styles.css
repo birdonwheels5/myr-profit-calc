@@ -58,14 +58,14 @@ div.welcome
 tr
 {
 	padding-bottom:10px;
-	border-style:solid;
+	border-bottom:solid;
 	border-width:1px;
 }
 
 td
 {
 	padding-right:10px;
-	border-style:solid;
+	border-left:solid;
 	border-width:1px;
 
 nav
