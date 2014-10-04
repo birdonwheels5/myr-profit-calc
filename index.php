@@ -368,6 +368,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					
 				<td/>
 			<tr/>
+			<br/>
 			<tr>
 				<td>
 					Power Cost: ($/Kwh)
