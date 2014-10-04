@@ -262,7 +262,6 @@
 			$power_cost, $myr_price, $btc_price, $coins_per_block;
 			
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
-			$coins_per_block = 1000; // Current block reward.
 			
 			$array_package = array();
 			
