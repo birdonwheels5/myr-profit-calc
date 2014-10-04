@@ -228,7 +228,7 @@
 			$sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, 
 			$sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, 
 			$sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, 
-			$power_cost, $myr_price, $btc_price, $coins_per_block, ;
+			$power_cost, $myr_price, $btc_price, $coins_per_block;
 			
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
 			$coins_per_block = 1000; // Current block reward.
