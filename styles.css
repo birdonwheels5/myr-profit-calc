@@ -65,6 +65,11 @@ table, th, td
     border: 1px solid black;
 }
 
+tr
+{
+	padding-bottom:12px;
+}
+
 nav
 {
 	width:30%;
