@@ -57,15 +57,15 @@ div.welcome
 
 tr
 {
-	padding-bottom:10px;
-	border-bottom-style:solid;
+	#padding-bottom:10px;
+	border-style:none none solid none;
 	border-width:1px;
 }
 
 td
 {
-	padding-right:10px;
-	border-left-style:solid;
+	#padding-right:10px;
+	border-style:none none none solid;
 	border-width:1px;
 
 nav
