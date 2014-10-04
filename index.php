@@ -414,6 +414,9 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td>
 					BTC/USD &nbsp;
 				<td/>
+				<td>
+					MYR/Block &nbsp;
+				<td/>
 			<tr/>
 			<tr>
 				<td>
@@ -426,7 +429,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5"> USD
 				<td/>
 				<td>
-					<input type="text" name="coins_per_block" value="<?php echo $coins_per_block;?>" size="5"> USD
+					<input type="text" name="coins_per_block" value="<?php echo $coins_per_block;?>" size="5"> MYR
 				<td/>
 			<tr/>
 		</table>
