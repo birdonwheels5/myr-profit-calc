@@ -264,11 +264,11 @@
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
 			
 			// Put the values into percents before we do our calculations
-			$sha_poolfee = $sha_poolfee/100;
-			$scrypt_poolfee = $scrypt_poolfee/100;
-			$skein_poolfee = $skein_poolfee/100;
-			$groestl_poolfee = $groestl_poolfee/100;
-			$qubit_poolfee = $qubit_poolfee/100;
+			$sha_fee = $sha_poolfee/100;
+			$scrypt_fee = $scrypt_poolfee/100;
+			$skein_fee = $skein_poolfee/100;
+			$groestl_fee = $groestl_poolfee/100;
+			$qubit_fee = $qubit_poolfee/100;
 			
 			$array_package = array();
 			
@@ -295,11 +295,11 @@
 			$qubit_values[0] = number_format($qubit_blocks_per_day, 2, '.', ',');
 			
 			// Total MYR made
-			$sha_values[1] = number_format(($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_poolfee), 2, '.', ',');
-			$scrypt_values[1] = number_format(($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_poolfee), 2, '.', ',');
-			$skein_values[1] = number_format(($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_poolfee), 2, '.', ',');
-			$groestl_values[1] = number_format(($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_poolfee), 2, '.', ',');
-			$qubit_values[1] = number_format(($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_poolfee), 2, '.', ',');
+			$sha_values[1] = number_format(($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee), 2, '.', ',');
+			$scrypt_values[1] = number_format(($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee), 2, '.', ',');
+			$skein_values[1] = number_format(($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee), 2, '.', ',');
+			$groestl_values[1] = number_format(($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee), 2, '.', ',');
+			$qubit_values[1] = number_format(($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee), 2, '.', ',');
 			
 			// Total BTC made
 			$sha_values[2] = number_format($sha_values[1] * $myr_price, 8, '.', ',');
