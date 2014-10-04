@@ -554,7 +554,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		<table class="mainTable">
 			<tr>
 				<td>
-					<b>Results: </b>
+					<b>Results (per day): </b>
 				<td/>
 				<td>
 					<b>Sha256d</b>
@@ -570,26 +570,6 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 				<td>
 					<b>Qubit</b>
-				<td/>
-			</tr>
-			<tr>
-				<td>
-					Blocks Per Day: 
-				<td/>
-				<td>
-					<?php print $results[0][0]; ?> Blocks
-				<td/>
-				<td>
-					<?php print $results[1][0]; ?> Blocks
-				<td/>
-				<td>
-					<?php print $results[2][0]; ?> Blocks
-				<td/>
-				<td>
-					<?php print $results[3][0]; ?> Blocks
-				<td/>
-				<td>
-					<?php print $results[4][0]; ?> Blocks
 				<td/>
 			</tr>
 			<tr>
@@ -650,6 +630,26 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 				<td>
 					<?php print $results[4][3]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Blocks: 
+				<td/>
+				<td>
+					<?php print $results[0][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[1][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[2][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[3][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[4][0]; ?> Blocks
 				<td/>
 			</tr>
 			<tr>
