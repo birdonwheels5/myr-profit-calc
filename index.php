@@ -88,6 +88,8 @@
 		
 		$btc_price = get_btc_price();
 		
+		$coins_per_block = 1000;
+		
 		
 		
 		$user_position_in_array = search_ip_address($user_array, $ip);
@@ -182,6 +184,8 @@
 			$myr_price = check_post($_POST["myr_price"], $myr_price);
 			
 			$btc_price = check_post($_POST["btc_price"], $btc_price);
+			
+			$coins_per_block = check_post($_POST["coins_per_block"], $coins_per_block);
 		
 		if(search_ip_address($user_array, $ip) >= 0)
 		{
@@ -420,6 +424,9 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 				<td>
 					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5"> USD
+				<td/>
+				<td>
+					<input type="text" name="coins_per_block" value="<?php echo $coins_per_block;?>" size="5"> USD
 				<td/>
 			<tr/>
 		</table>
