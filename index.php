@@ -555,7 +555,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
 				</td>
 			</tr>
-		</table></center>
+		</table>
 		
 		<table class="mainTable">
 			<tr>
@@ -783,7 +783,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					?> days
 				<td/>
 			</tr>
-		</table>
+		</table></center>
 		
 	</div>
 	  
