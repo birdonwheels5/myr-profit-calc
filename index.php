@@ -520,7 +520,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			</tr>
 		</table></center>
 		
-		<table class="resultsTable">
+		<table class="mainTable">
 			<tr>
 				<td>
 					Blocks Per Day: 
