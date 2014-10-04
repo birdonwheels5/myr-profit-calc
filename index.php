@@ -273,7 +273,7 @@
 			$array_package = array();
 			
 			// What the values are, in order:
-			// blocks/day, MYR total, BTC total, USD total, power consumption, power cost in USD, profit made in USD, time to ROI
+			// time to find block, MYR total, BTC total, USD total, power consumption, power cost in USD, profit made in USD, time to ROI
 			$sha_values = array();
 			$scrypt_values = array();
 			$skein_values = array();
@@ -287,12 +287,12 @@
 			$groestl_blocks_per_day = (86400 / (($groestl_diff * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier)));
 			$qubit_blocks_per_day = (86400 / (($qubit_diff * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier)));
 			
-			// Blocks per day
-			$sha_values[0] = number_format($sha_blocks_per_day, 2, '.', ',');
-			$scrypt_values[0] = number_format($scrypt_blocks_per_day, 2, '.', ',');
-			$skein_values[0] = number_format($skein_blocks_per_day, 2, '.', ',');
-			$groestl_values[0] = number_format($groestl_blocks_per_day, 2, '.', ',');
-			$qubit_values[0] = number_format($qubit_blocks_per_day, 2, '.', ',');
+			// Time to find one block
+			$sha_values[0] = number_format(1/$sha_blocks_per_day, 2, '.', ',');
+			$scrypt_values[0] = number_format(1/$scrypt_blocks_per_day, 2, '.', ',');
+			$skein_values[0] = number_format(1/$skein_blocks_per_day, 2, '.', ',');
+			$groestl_values[0] = number_format(1/$groestl_blocks_per_day, 2, '.', ',');
+			$qubit_values[0] = number_format(1/$qubit_blocks_per_day, 2, '.', ',');
 			
 			// Total MYR made
 			$sha_values[1] = number_format((($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee)), 2, '.', ',');
@@ -640,22 +640,22 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			</tr>
 			<tr>
 				<td>
-					Blocks: 
+					Time to find one block: 
 				<td/>
 				<td>
-					<?php print $results[0][0]; ?> Blocks
+					<?php print $results[0][0]; ?> days
 				<td/>
 				<td>
-					<?php print $results[1][0]; ?> Blocks
+					<?php print $results[1][0]; ?> days
 				<td/>
 				<td>
-					<?php print $results[2][0]; ?> Blocks
+					<?php print $results[2][0]; ?> days
 				<td/>
 				<td>
-					<?php print $results[3][0]; ?> Blocks
+					<?php print $results[3][0]; ?> days
 				<td/>
 				<td>
-					<?php print $results[4][0]; ?> Blocks
+					<?php print $results[4][0]; ?> days
 				<td/>
 			</tr>
 			<tr>
