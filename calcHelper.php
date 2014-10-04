@@ -70,6 +70,8 @@ function get_myr_price()
 	
 	$market = $json->markets;
 	
+	var_dump($market);
+	
 	$currency = $market->MYR;
 	
 	$myr_price = $currency->{"lasttradeprice"};
