@@ -58,14 +58,14 @@ div.welcome
 div.mainTable
 {
     border-collapse: collapse;
-    width:100%;
+    width:80%;
     height:60%;
 }
 
 div.subTable
 {
     border-collapse: collapse;
-    width:50%;
+    width:40%;
     height:30%;
 }
 
@@ -76,7 +76,7 @@ div.subTable
 
 td
 {
-	padding:5px;
+	#padding:10px;
 }
 
 nav
