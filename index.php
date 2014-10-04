@@ -90,6 +90,8 @@
 		
 		$coins_per_block = get_block_value();
 		
+		$results = array();
+		
 		
 		
 		$user_position_in_array = search_ip_address($user_array, $ip);
@@ -149,6 +151,8 @@
 			$qubit_poolfee = check_zero($qubit_poolfee);
 			
 			$power_cost = check_zero($power_cost);
+			
+			$results = calculate();
 		}
 		
 		if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -201,6 +205,8 @@
 			$scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, 
 			$skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
 		}
+		
+		$results = calculate();
 		
 		if($_POST["clear"])
 		{
@@ -515,12 +521,167 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		</table></center>
 		
 		<table class="resultsTable">
-			<?php
-			$results = array();
-			$results = calculate();
-			print $results[0][4] . ", " . $results[1][4] . ", " . $results[2][4] . ", " . $results[3][4] . ", " . $results[4][4]; ?>
+			<tr>
+				<td>
+					Blocks Per Day: 
+				<td/>
+				<td>
+					<?php print $results[0][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[1][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[2][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[3][0]; ?> Blocks
+				<td/>
+				<td>
+					<?php print $results[4][0]; ?> Blocks
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					MYR Mined: 
+				<td/>
+				<td>
+					<?php print $results[0][1]; ?> MYR
+				<td/>
+				<td>
+					<?php print $results[1][1]; ?> MYR
+				<td/>
+				<td>
+					<?php print $results[2][1]; ?> MYR
+				<td/>
+				<td>
+					<?php print $results[3][1]; ?> MYR
+				<td/>
+				<td>
+					<?php print $results[4][1]; ?> MYR
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					BTC Equivalent: 
+				<td/>
+				<td>
+					<?php print $results[0][2]; ?> ฿
+				<td/>
+				<td>
+					<?php print $results[1][2]; ?> ฿
+				<td/>
+				<td>
+					<?php print $results[2][2]; ?> ฿
+				<td/>
+				<td>
+					<?php print $results[3][2]; ?> ฿
+				<td/>
+				<td>
+					<?php print $results[4][2]; ?> ฿
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					USD Equivalent: 
+				<td/>
+				<td>
+					<?php print $results[0][3]; ?> $
+				<td/>
+				<td>
+					<?php print $results[1][3]; ?> $
+				<td/>
+				<td>
+					<?php print $results[2][3]; ?> $
+				<td/>
+				<td>
+					<?php print $results[3][3]; ?> $
+				<td/>
+				<td>
+					<?php print $results[4][3]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Total Power Consumption: 
+				<td/>
+				<td>
+					<?php print $results[0][4]; ?> $
+				<td/>
+				<td>
+					<?php print $results[1][4]; ?> $
+				<td/>
+				<td>
+					<?php print $results[2][4]; ?> $
+				<td/>
+				<td>
+					<?php print $results[3][4]; ?> $
+				<td/>
+				<td>
+					<?php print $results[4][4]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Total Power Cost: 
+				<td/>
+				<td>
+					<?php print $results[0][5]; ?> $
+				<td/>
+				<td>
+					<?php print $results[1][5]; ?> $
+				<td/>
+				<td>
+					<?php print $results[2][5]; ?> $
+				<td/>
+				<td>
+					<?php print $results[3][5]; ?> $
+				<td/>
+				<td>
+					<?php print $results[4][5]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Total Profit: 
+				<td/>
+				<td>
+					<?php print $results[0][6]; ?> $
+				<td/>
+				<td>
+					<?php print $results[1][6]; ?> $
+				<td/>
+				<td>
+					<?php print $results[2][6]; ?> $
+				<td/>
+				<td>
+					<?php print $results[3][6]; ?> $
+				<td/>
+				<td>
+					<?php print $results[4][6]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Time to ROI: 
+				<td/>
+				<td>
+					<?php print $results[0][7]; ?> days
+				<td/>
+				<td>
+					<?php print $results[1][7]; ?> days
+				<td/>
+				<td>
+					<?php print $results[2][7]; ?> days
+				<td/>
+				<td>
+					<?php print $results[3][7]; ?> days
+				<td/>
+				<td>
+					<?php print $results[4][7]; ?> days
+				<td/>
+			</tr>
 		</table>
-		
 		
 	</div>
 	  
