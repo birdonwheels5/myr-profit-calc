@@ -64,10 +64,10 @@ div.inputHolder
 	width:100%;
 	margin-left:auto;
 	margin-right:auto;
-	border-radius:6px;
+	#border-radius:6px;
 	#background-color:hsla(236, 0%, 67%, 0.78);
-	-webkit-box-shadow: 3px 3px 5px #888888;
-	-moz-box-shadow: 3px 3px 5px #888888;
+	#-webkit-box-shadow: 3px 3px 5px #888888;
+	#-moz-box-shadow: 3px 3px 5px #888888;
 	margin-bottom:25px;
 	padding-left:10px;
 }
