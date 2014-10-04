@@ -374,10 +374,10 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					Power Cost: ($/Kwh)
 				<td/>
 				<td>
-					MYR/BTC Price: 
+					MYR/BTC: 
 				<td/>
 				<td>
-					BTC/USD Price: 
+					BTC/USD: 
 				<td/>
 			<tr/>
 			<tr>
