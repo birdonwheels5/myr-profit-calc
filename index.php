@@ -369,7 +369,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 			<tr/>
 		</table>
-		<table>
+		<center><table>
 			<br/>
 			<tr>
 				<td>
