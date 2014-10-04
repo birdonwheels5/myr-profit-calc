@@ -321,7 +321,7 @@
 			$sha_values[6] = number_format($sha_values[3] - $sha_values[5], 2, '.', ',');
 			$scrypt_values[6] = number_format($scrypt_values[3] - $scrypt_values[5], 2, '.', ',');
 			$skein_values[6] = number_format($skein_values[3] - $skein_values[5], 2, '.', ',');
-			$groestl_values[6] = number_format($groestl_values[3] - $groestl_values[5, 2, '.', ',')];
+			$groestl_values[6] = number_format($groestl_values[3] - $groestl_values[5], 2, '.', ',');
 			$qubit_values[6] = number_format($qubit_values[3] - $qubit_values[5], 2, '.', ',');
 			
 			// Time to ROI
