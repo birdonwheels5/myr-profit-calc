@@ -730,7 +730,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print "&infin";
+							print "&#8734";
 						}
 					?> days
 				<td/>
@@ -742,7 +742,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print "&infin";
+							print "&#8734";
 						}
 					?> days
 				<td/>
@@ -754,7 +754,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print "&infin";
+							print "&#8734";
 						}
 					?> days
 				<td/>
@@ -766,7 +766,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print "&infin";
+							print "&#8734";
 						}
 					?> days
 				<td/>
@@ -778,7 +778,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print "&infin";
+							print "&#8734";
 						}
 					?> days
 				<td/>
