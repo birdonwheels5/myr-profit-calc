@@ -70,7 +70,7 @@ function get_myr_price()
 	
 	var_dump($json);
 	
-	$myr_price = $json->{["return"]["MYR"]["lasttradeprice"]};
+	$myr_price = $json->{"return:MYR:lasttradeprice"};
 	
 	return $myr_price;
 }
