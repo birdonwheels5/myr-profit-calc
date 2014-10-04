@@ -301,19 +301,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Difficulty: (24 hr average)
 				<td/>
 				<td>
-					 <input type="text" name="sha_diff" value="<?php echo $sha_diff;?>" size="5">
+					&nbsp; <input type="text" name="sha_diff" value="<?php echo $sha_diff;?>" size="5">
 				<td/>
 				<td>
-					 <input type="text" name="scrypt_diff" value="<?php echo $scrypt_diff;?>" size="5">
+					&nbsp; <input type="text" name="scrypt_diff" value="<?php echo $scrypt_diff;?>" size="5">
 				<td/>
 				<td>
-					 <input type="text" name="skein_diff" value="<?php echo $skein_diff;?>" size="5">
+					&nbsp; <input type="text" name="skein_diff" value="<?php echo $skein_diff;?>" size="5">
 				<td/>
 				<td>
-					 <input type="text" name="groestl_diff" value="<?php echo $groestl_diff;?>" size="5">
+					&nbsp; <input type="text" name="groestl_diff" value="<?php echo $groestl_diff;?>" size="5">
 				<td/>
 				<td>
-					 <input type="text" name="qubit_diff" value="<?php echo $qubit_diff;?>" size="5">
+					&nbsp; <input type="text" name="qubit_diff" value="<?php echo $qubit_diff;?>" size="5">
 				<td/>
 			</tr>
 			<tr>
@@ -321,19 +321,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Hashrate: 
 				<td/>
 				<td>
-					 <input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="5"> GH/s
+					&nbsp; <input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="5"> GH/s
 				<td/>
 				<td>
-					 <input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="5"> MH/s
+					&nbsp; <input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					 <input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="5"> MH/s
+					&nbsp; <input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					 <input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="5"> MH/s
+					&nbsp; <input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					 <input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="5"> MH/s
+					&nbsp; <input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="5"> MH/s
 				<td/>
 			<tr/>
 			<tr>
@@ -341,19 +341,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Power Usage: 
 				<td/>
 				<td>
-					 <input type="text" name="sha_power" value="<?php echo $sha_power;?>" size="5"> watts
+					&nbsp; <input type="text" name="sha_power" value="<?php echo $sha_power;?>" size="5"> watts
 				<td/>
 				<td>
-					 <input type="text" name="scrypt_power" value="<?php echo $scrypt_power;?>" size="5"> watts
+					&nbsp; <input type="text" name="scrypt_power" value="<?php echo $scrypt_power;?>" size="5"> watts
 				<td/>
 				<td>
-					 <input type="text" name="skein_power" value="<?php echo $skein_power;?>" size="5"> watts
+					&nbsp; <input type="text" name="skein_power" value="<?php echo $skein_power;?>" size="5"> watts
 				<td/>
 				<td>
-					 <input type="text" name="groestl_power" value="<?php echo $groestl_power;?>" size="5"> watts
+					&nbsp; <input type="text" name="groestl_power" value="<?php echo $groestl_power;?>" size="5"> watts
 				<td/>
 				<td>
-					 <input type="text" name="qubit_power" value="<?php echo $qubit_power;?>" size="5"> watts
+					&nbsp; <input type="text" name="qubit_power" value="<?php echo $qubit_power;?>" size="5"> watts
 				<td/>
 			<tr/>
 			<tr>
@@ -381,19 +381,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Pool fees: 
 				<td/>
 				<td>
-					 <input type="text" name="sha_poolfee" value="<?php echo $sha_poolfee;?>" size="5"> %
+					&nbsp; <input type="text" name="sha_poolfee" value="<?php echo $sha_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					 <input type="text" name="scrypt_poolfee" value="<?php echo $scrypt_poolfee;?>" size="5"> %
+					&nbsp; <input type="text" name="scrypt_poolfee" value="<?php echo $scrypt_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					 <input type="text" name="skein_poolfee" value="<?php echo $skein_poolfee;?>" size="5"> %
+					&nbsp; <input type="text" name="skein_poolfee" value="<?php echo $skein_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					 <input type="text" name="groestl_poolfee" value="<?php echo $groestl_poolfee;?>" size="5"> %
+					&nbsp; <input type="text" name="groestl_poolfee" value="<?php echo $groestl_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					 <input type="text" name="qubit_poolfee" value="<?php echo $qubit_poolfee;?>" size="5"> %
+					&nbsp; <input type="text" name="qubit_poolfee" value="<?php echo $qubit_poolfee;?>" size="5"> %
 				<td/>
 			<tr/>
 		</table>
