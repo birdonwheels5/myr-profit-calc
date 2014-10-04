@@ -415,7 +415,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="text" name="power_cost" value="<?php echo $power_cost;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="myr_price" value="<?php echo $myr_price;?>" size="6">
+					<input type="text" name="myr_price" value="<?php echo $myr_price;?>" size="7">
 				<td/>
 				<td>
 					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5">
