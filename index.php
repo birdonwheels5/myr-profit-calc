@@ -435,6 +435,9 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<tr/>
 			<tr>
 				<td>
+					&nbsp;
+				</td>
+				<td>
 					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
 				</td>
 			</tr>
