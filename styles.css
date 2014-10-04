@@ -69,10 +69,10 @@ div.subTable
     height:30%;
 }
 
-div.mainTable, div.subTable
-{
-    border: 1px solid black;
-}
+#div.mainTable, div.subTable, td, th
+#{
+#    border: 1px solid black;
+#}
 
 td
 {
