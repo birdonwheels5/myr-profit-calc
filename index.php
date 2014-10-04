@@ -117,15 +117,15 @@
 			$power_cost = $user_array[$user_position_in_array]["power_cost"];
 		}
 		
-		$sha_diff = number_format($diff[0], 2, '.', ',');
+		$sha_diff = number_format($diff[0], 2, '.', '');
 		
-		$scrypt_diff = number_format($diff[1], 2, '.', ',');
+		$scrypt_diff = number_format($diff[1], 2, '.', '');
 		
-		$skein_diff = number_format($diff[2], 2, '.', ',');
+		$skein_diff = number_format($diff[2], 2, '.', '');
 		
-		$groestl_diff = number_format($diff[3], 2, '.', ',');
+		$groestl_diff = number_format($diff[3], 2, '.', '');
 		
-		$qubit_diff = number_format($diff[4], 2, '.', ',');
+		$qubit_diff = number_format($diff[4], 2, '.', '');
 		
 		
 		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
@@ -279,19 +279,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Difficulty: (24 hr average)
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $sha_difficulty;?>" size="4">
+					<input type="text" name="sha_hash" value="<?php echo $sha_diff;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $scrypt_difficulty;?>" size="4">
+					<input type="text" name="sha_hash" value="<?php echo $scrypt_diff;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $skein_difficulty;?>" size="4">
+					<input type="text" name="sha_hash" value="<?php echo $skein_diff;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $groestl_difficulty;?>" size="4">
+					<input type="text" name="sha_hash" value="<?php echo $groestl_diff;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $qubit_difficulty;?>" size="4">
+					<input type="text" name="sha_hash" value="<?php echo $qubit_diff;?>" size="5">
 				<td/>
 			</tr>
 			<tr>
@@ -299,19 +299,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Hashrate: 
 				<td/>
 				<td>
-					<input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="4"> GH/s
+					<input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="5"> GH/s
 				<td/>
 				<td>
-					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="4"> MH/s
+					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					<input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="4"> MH/s
+					<input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					<input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="4"> MH/s
+					<input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="5"> MH/s
 				<td/>
 				<td>
-					<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="4"> MH/s
+					<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="5"> MH/s
 				<td/>
 			<tr/>
 			<tr>
