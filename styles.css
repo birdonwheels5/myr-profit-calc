@@ -119,10 +119,10 @@ div.resultsTable
     height:80%;
 }
 
-#div.resultsTable, td, th
-#{
-#    border: 1px solid black;
-#}
+div.resultsTable, td, th
+{
+    border: 1px solid black;
+}
 
 td
 {
