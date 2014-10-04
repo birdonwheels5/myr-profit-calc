@@ -20,19 +20,7 @@
 				</div>
 				
 				<div class="button">
-					<p><a href ="index.html">Home</a></p>
-				</div>
-				
-				<div class="button">
-					<p><a href ="CryptoHub.html">Crypto Hub</a></p>
-				</div>
-				
-				<div class="button">
-					<p><a href ="http://birdstekkit.enjin.com" target="_blank">Minecraft Servers</a></p>
-				</div>
-				
-				<div class="button">
-					<p><a href ="https://birdonwheels5.no-ip.org/index.php">Cloud Server</a></p>
+					<p><a href ="http://birdonwheels5.no-ip.org">Back to Block Explorer</a></p>
 				</div>
 				
 			</header>
@@ -383,12 +371,14 @@
 			<article>
 				
 	<div class="welcome">
-		<h2> <a href="http://myriadplatform.org" target="_blank"><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator </a></h2>
+		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
         <p>
-	<strong>Myriadcoin</strong> is the first multi-PoW cryptocurrency that uses 5 concurrent hashing algorithms, each of which have an equal chance of solving the next block. 
-Each algorithm has an independent difficulty, and a block time of 2.5 minutes, which averages out to 30 seconds per block across all the algorithms. 
-The 5 algorithms that comprise Myriadcoin are Sha256, Scrypt, Groestl, Skein, and Qubit. 
-For more information, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
+	Welcome to the Myriadcoin profitability calculator! This lets you figure out mining profitability for all algorithms at once, or 
+	however many you want. You don't need to fill out all the fields, and the difficulty is calculated from the average of difficulties
+	 taken every hour over the past 24 hours. Enjoy!<br/><br/>
+	 
+	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
+	</div>
 
         <p><h3>Algorithm Statistics:</h3> 
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
