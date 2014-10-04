@@ -84,6 +84,10 @@
 			
 		$power_cost = "";
 		
+		$myr_price = get_myr_price();
+		
+		$btc_price = get_btc_price();
+		
 		
 		
 		$user_position_in_array = search_ip_address($user_array, $ip);
@@ -150,55 +154,36 @@
 		if ($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
 			
+			$sha_hashrate = check_post($_POST["sha_hash"], $sha_hashrate);
+			$scrypt_hashrate = check_post($_POST["scrypt_hash"], $scrypt_hashrate);
+			$skein_hashrate = check_post($_POST["skein_hash"], $skein_hashrate);
+			$groestl_hashrate = check_post($_POST["groestl_hash"], $groestl_hashrate);
+			$qubit_hashrate = check_post($_POST["qubit_hash"], $qubit_hashrate);
 			
-			if(is_numeric($_POST["sha_hash"]) == false or empty($_POST["sha_hash"]))
-			{
-				$sha_hashrate = "";
-			}
-			else
-			{
-				$sha_hashrate = $_POST["sha_hash"]; // Multiplied later to be in GH/s
-			}
+			$sha_power = check_post($_POST["sha_power"], $sha_power);
+			$scrypt_power = check_post($_POST["scrypt_power"], $scrypt_power);
+			$skein_power = check_post($_POST["skein_power"], $skein_power);
+			$groestl_power = check_post($_POST["groestl_power"], $groestl_power);
+			$qubit_power = check_post($_POST["qubit_power"], $qubit_power);
 			
-
-			if(is_numeric($_POST["scrypt_hash"]) == false or empty($_POST["scrypt_hash"]))
-			{
-				$scrypt_hashrate = "";
-			}
-			else
-			{
-				$scrypt_hashrate = $_POST["scrypt_hash"];
-			}
+			$sha_hardware = check_post($_POST["sha_hardware"], $sha_hardware);
+			$scrypt_hardware = check_post($_POST["scrypt_hardware"], $scrypt_hardware);
+			$skein_hardware = check_post($_POST["skein_hardware"], $skein_hardware);
+			$groestl_hardware = check_post($_POST["groestl_hardware"], $groestl_hardware);
+			$qubit_hardware = check_post($_POST["qubit_hardware"], $qubit_hardware);
 			
-
-			if(is_numeric($_POST["skein_hash"]) == false or empty($_POST["skein_hash"]))
-			{
-				$skein_hashrate = "";
-			}
-			else
-			{
-				$skein_hashrate = $_POST["skein_hash"];
-			}
+			$sha_poolfee = check_post($_POST["sha_poolfee"], $sha_poolfee);
+			$scrypt_poolfee = check_post($_POST["scrypt_poolfee"], $scrypt_poolfee);
+			$skein_poolfee = check_post($_POST["skein_poolfee"], $skein_poolfee);
+			$groestl_poolfee = check_post($_POST["groestl_poolfee"], $groestl_poolfee);
+			$qubit_poolfee = check_post($_POST["qubit_poolfee"], $qubit_poolfee);
 			
-
-			if(is_numeric($_POST["groestl_hash"]) == false or empty($_POST["groestl_hash"]))
-			{
-				$groestl_hashrate = "";
-			}
-			else
-			{
-				$groestl_hashrate = $_POST["groestl_hash"];
-			}
 			
-
-			if(is_numeric($_POST["qubit_hash"]) == false or empty($_POST["qubit_hash"]))
-			{
-				$qubit_hashrate = "";
-			}
-			else
-			{
-				$qubit_hashrate = $_POST["qubit_hash"];
-			}
+			$power_cost = check_post($_POST["power_cost"], $power_cost);
+			
+			$myr_price = check_post($_POST["myr_price"], $myr_price);
+			
+			$btc_price = check_post($_POST["btc_price"], $btc_price);
 			
 		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
 		
@@ -255,6 +240,20 @@
 			}
 			
 			return $number;
+		}
+		
+		// Validates POST input
+		function check_post($post, $value)
+		{
+			if(is_numeric($post) == false or empty($post))
+			{
+				$value = "";
+			}
+			else
+			{
+				$value = $post;
+			}
+			return $value;
 		}
 	?>
 	
