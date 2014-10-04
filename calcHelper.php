@@ -68,7 +68,9 @@ function get_myr_price()
 	
 	$json = json_decode(stream_get_contents($url));
 	
-	$market = $json->{"markets"};
+	$return = $json->{"return"};
+	
+	$market = $return->{"markets"};
 	
 	var_dump($market);
 	
