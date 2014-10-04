@@ -330,11 +330,11 @@
 			$qubit_values[6] = $qubit_values[3] - $qubit_values[5];
 			
 			// Time to ROI
-			$sha_values[7] = $sha_hardware/$sha_values[6];
-			$scrypt_values[7] = $scrypt_hardware/$scrypt_values[6];
-			$skein_values[7] = $skein_hardware/$skein_values[6];
-			$groestl_values[7] = $groestl_hardware/$groestl_values[6];
-			$qubit_values[7] = $qubit_hardware/$qubit_values[6];
+			$sha_values[7] = number_format($sha_hardware/$sha_values[6], 2, '.', ',');
+			$scrypt_values[7] = number_format($scrypt_hardware/$scrypt_values[6], 2, '.', ',');
+			$skein_values[7] = number_format($skein_hardware/$skein_values[6], 2, '.', ',');
+			$groestl_values[7] = number_format($groestl_hardware/$groestl_values[6], 2, '.', ',');
+			$qubit_values[7] = number_format($qubit_hardware/$qubit_values[6], 2, '.', ',');
 			
 			$array_package[0] = $sha_values;
 			$array_package[1] = $scrypt_values;
