@@ -182,12 +182,6 @@
 			$groestl_poolfee = check_post($_POST["groestl_poolfee"], $groestl_poolfee);
 			$qubit_poolfee = check_post($_POST["qubit_poolfee"], $qubit_poolfee);
 			
-			$sha_poolfee = $sha_poolfee/100;
-			$scrypt_poolfee = $scrypt_poolfee/100;
-			$skein_poolfee = $skein_poolfee/100;
-			$groestl_poolfee = $groestl_poolfee/100;
-			$qubit_poolfee = $qubit_poolfee/100;
-			
 			
 			$power_cost = check_post($_POST["power_cost"], $power_cost);
 			
@@ -268,6 +262,13 @@
 			$power_cost, $myr_price, $btc_price, $coins_per_block;
 			
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
+			
+			// Put the values into percents before we do our calculations
+			$sha_poolfee = $sha_poolfee/100;
+			$scrypt_poolfee = $scrypt_poolfee/100;
+			$skein_poolfee = $skein_poolfee/100;
+			$groestl_poolfee = $groestl_poolfee/100;
+			$qubit_poolfee = $qubit_poolfee/100;
 			
 			$array_package = array();
 			
