@@ -247,59 +247,150 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 
 	<center><div class="inputHolder">
 	
-		<div class="box">
-			Algorithm: 
-		</div>
-		
-		<div class="box">
-			Sha256d
-		</div>
-		
-		<div class="box">
-			Scrypt
-		</div>
-		
-		<div class="box">
-			Skein
-		</div>
-		
-		<div class="box">
-			Groestl
-		</div>
-		
-		<div class="box">
-			Qubit
-		</div>
-		
-		<br/><br/> <!-- -------------------------------------------------- -->
-		
-		<div class="box">
-			Hashrate: 
-		</div>
-		
-		<div class="box">
-			<input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="4">
-		</div>
-		
-		<div class="box">
-			<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="4">
-		</div>
-		
-		<div class="box">
-			<input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="4">
-		</div>
-		
-		<div class="box">
-			<input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="4">
-		</div>
-		
-		<div class="box">
-			<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="4">
-		</div>
-		
-		<br/><br/> <!-- -------------------------------------------------- -->
-		
-		
+		<table>
+			<tr>
+				<td>
+					Algorithm: 
+				<td/>
+				<td>
+					Sha256d
+				<td/>
+				<td>
+					Scrypt
+				<td/>
+				<td>
+					Skein
+				<td/>
+				<td>
+					Groestl
+				<td/>
+				<td>
+					Qubit
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					 Difficulty: (24 hr average)
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					 Hashrate: 
+				<td/>
+				<td>
+					<input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="4"> GH/s
+				<td/>
+				<td>
+					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="4"> MH/s
+				<td/>
+				<td>
+					<input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="4"> MH/s
+				<td/>
+				<td>
+					<input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="4"> MH/s
+				<td/>
+				<td>
+					<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="4"> MH/s
+				<td/>
+			<tr/>
+			<tr>
+				<td>
+					 Power Usage: (Watts)
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+			<tr/>
+			<tr>
+				<td>
+					 Hardware Cost: (In US dollars)
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					 Pool fees: (Percentage)
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+				<td>
+					
+				<td/>
+			<tr/>
+			<tr>
+				<td>
+					Power Cost: ($/Kwh)
+				<td/>
+				<td>
+					MYR/BTC Price: 
+				<td/>
+				<td>
+					BTC/USD Price: 
+				<td/>
+			<tr/>
+			<tr>
+				<td>
+					num
+				<td/>
+				<td>
+					num
+				<td/>
+				<td>
+					numb
+				<td/>
+			<tr/>
+		</table>
 		
 		
 	</div>
