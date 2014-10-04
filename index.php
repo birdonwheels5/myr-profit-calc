@@ -115,6 +115,10 @@
 			$qubit_poolfee = $user_array[$user_position_in_array]["qubit_poolfee"];
 			
 			$power_cost = $user_array[$user_position_in_array]["power_cost"];
+			
+			// Now to set fields to blank if they are 0...
+			
+			
 		}
 		
 		$sha_diff = number_format($diff[0], 2, '.', '');
@@ -402,7 +406,8 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		</table></center>
 		
 		<table class="resultsTable">
-			
+			<?php calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate)
+			print $sha_profit . " " . $scrypt_profit . " " . $skein_profit . " " . $groestl_profit . " " . $qubit_profit; ?>
 		</table>
 		
 		
