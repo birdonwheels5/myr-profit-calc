@@ -117,12 +117,13 @@ div.resultsTable
     border-collapse: collapse;
     width:100%;
     height:80%;
-}
-
-div.resultsTable, td
-{
     border: 1px solid black;
 }
+
+#div.resultsTable, td, th
+#{
+#    border: 1px solid black;
+#}
 
 td
 {
