@@ -61,7 +61,7 @@ div.inputHolder
 	text-align:left;
 	#padding-left:5%;
 	#padding-right:2%;
-	width:125%;
+	width:100%;
 	margin-left:auto;
 	margin-right:auto;
 	border-radius:6px;
@@ -140,7 +140,7 @@ nav
 
 article
 {
-	width:75%;
+	width:85%;
 	height:40%;
 	text-align:left;
 	padding-left:2%;
