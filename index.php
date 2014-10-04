@@ -373,9 +373,11 @@
 	<div class="welcome">
 		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
         <p>
-	Welcome to the Myriadcoin profitability calculator! This lets you figure out mining profitability for all algorithms at once, or 
-	however many you want. You don't need to fill out all the fields, and the difficulty is calculated from the average of difficulties
-	 taken every hour over the past 24 hours. Enjoy!<br/><br/>
+	Welcome! This tool lets you figure out mining profitability for all algorithms at once, or 
+	however many you want. You don't need to fill out all the fields (eg. leave Power Cost blank if you're not paying for 
+	electric). The difficulty is calculated from the average of difficulties
+	 taken every hour over the past 24 hours, so it is much more resistant to change than if the current difficulties were used.<br/>
+	 Enjoy!<br/><br/>
 	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
 	</div>
@@ -788,6 +790,9 @@
 			
 			<div class="paddingBottom">
 			</div>
+			<footer>
+				Profit Calculator by birdonwheels5. Want to show some love? Donate some MYR: MNYERWCHqrH1EkGNpF4T8o8dGB391A5jmm
+			</footer>
 		</div>
 	</body>
 	
