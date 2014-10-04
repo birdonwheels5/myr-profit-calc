@@ -548,7 +548,7 @@
 		</div>
 		
 		<div class="resultsBox">
-		<table class="mainTable">
+		<table class="resultsTable">
 			<tr>
 				<td>
 					<b>Results (per day): </b>
