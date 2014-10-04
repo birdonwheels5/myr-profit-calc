@@ -369,7 +369,7 @@
 		<center><div class="container" style="width:100%;float:left;">
 			
 			<article>
-				
+	<div class="inputHolder">			
 	<div class="welcome">
 		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
         <p>
@@ -381,7 +381,7 @@
 	</div>
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-	<center><div class="inputHolder">
+	<center>
 		<div class="inputBox">
 		<center><table class="mainTable">
 			<tr>
