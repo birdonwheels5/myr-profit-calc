@@ -88,7 +88,7 @@
 		
 		$btc_price = get_btc_price();
 		
-		$coins_per_block = 1000;
+		$coins_per_block = get_block_value();
 		
 		
 		
