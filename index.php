@@ -379,12 +379,10 @@
 	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
 	</div>
-
-        <p><h3>Algorithm Statistics:</h3> 
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<center><div class="inputHolder">
-	
+		<div class="inputBox">
 		<center><table class="mainTable">
 			<tr>
 				<td>
@@ -545,7 +543,9 @@
 				</td>
 			</tr>
 		</table>
+		</div>
 		
+		<div class="resultsBox">
 		<table class="mainTable">
 			<tr>
 				<td>
@@ -773,6 +773,7 @@
 				<td/>
 			</tr>
 		</table></center>
+		</div>
 		
 	</div>
 	  
