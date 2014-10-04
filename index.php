@@ -246,7 +246,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<div class="box">
-	
+	<p> </p>
 	</div>
 	
 	<div class="box">
@@ -269,11 +269,35 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 	Qubit
 	</div>
 	
-	<br/>
+	<br/> <!-- -------------------------------------------------- -->
 	
 	<div class="box">
-	Number
+	Hashrate: 
 	</div>
+	
+	<div class="box">
+	Number 
+	</div>
+	
+	<div class="box">
+	Number 
+	</div>
+	
+	<div class="box">
+	Number 
+	</div>
+	
+	<div class="box">
+	Number 
+	</div>
+	
+	<div class="box">
+	Number 
+	</div>
+	
+	<br/> <!-- -------------------------------------------------- -->
+	
+	
 	  
 	</form>
 
