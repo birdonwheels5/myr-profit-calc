@@ -44,7 +44,7 @@ div.button
 
 div.welcome
 {
-	width:100%;
+	width:75%;
 	margin-left:auto;
 	margin-right:auto;
 	border-radius:6px;
@@ -57,7 +57,7 @@ div.welcome
 
 div.inputHolder
 {
-	height:40%;
+	height:100%;
 	text-align:left;
 	#padding-left:5%;
 	#padding-right:2%;
