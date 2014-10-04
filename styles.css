@@ -80,6 +80,15 @@ article
 	padding-right:2%;
 }
 
+div.inputHolder
+{
+	width:75%;
+	height:40%;
+	text-align:left;
+	padding-left:2%;
+	padding-right:2%;
+}
+
 # Depreciated
 div.status
 {
