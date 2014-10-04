@@ -381,10 +381,9 @@
 		<center><div class="container" style="width:100%;float:left;">
 			
 			<article>
-				<p>
-					<!-- <center><img src="logo_big.png"></center> Insert Main Logo here -->
-						
-		<h2> <a href="http://myriadplatform.org" target="_blank"><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:8%;"</img>  Myriadcoin </a></h2>
+				
+	<div class="welcome">
+		<h2> <a href="http://myriadplatform.org" target="_blank"><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator </a></h2>
         <p>
 	<strong>Myriadcoin</strong> is the first multi-PoW cryptocurrency that uses 5 concurrent hashing algorithms, each of which have an equal chance of solving the next block. 
 Each algorithm has an independent difficulty, and a block time of 2.5 minutes, which averages out to 30 seconds per block across all the algorithms. 
@@ -640,26 +639,6 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			</tr>
 			<tr>
 				<td>
-					Time to find one block: 
-				<td/>
-				<td>
-					<?php print $results[0][0]; ?> days
-				<td/>
-				<td>
-					<?php print $results[1][0]; ?> days
-				<td/>
-				<td>
-					<?php print $results[2][0]; ?> days
-				<td/>
-				<td>
-					<?php print $results[3][0]; ?> days
-				<td/>
-				<td>
-					<?php print $results[4][0]; ?> days
-				<td/>
-			</tr>
-			<tr>
-				<td>
 					Total Power Consumption: 
 				<td/>
 				<td>
@@ -716,6 +695,26 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 				<td>
 					<?php print $results[4][6]; ?> $
+				<td/>
+			</tr>
+			<tr>
+				<td>
+					Time to find one block: 
+				<td/>
+				<td>
+					<?php print $results[0][0]; ?> days
+				<td/>
+				<td>
+					<?php print $results[1][0]; ?> days
+				<td/>
+				<td>
+					<?php print $results[2][0]; ?> days
+				<td/>
+				<td>
+					<?php print $results[3][0]; ?> days
+				<td/>
+				<td>
+					<?php print $results[4][0]; ?> days
 				<td/>
 			</tr>
 			<tr>
