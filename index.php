@@ -319,19 +319,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Power Usage: (Watts)
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $sha_power;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_power;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="skein_hash" value="<?php echo $skein_power;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="groestl_hash" value="<?php echo $groestl_power;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="qubit_hash" value="<?php echo $qubit_power;?>" size="5">
 				<td/>
 			<tr/>
 			<tr>
@@ -339,19 +339,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Hardware Cost: (In US dollars)
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $sha_hardware;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hardware;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="skein_hash" value="<?php echo $skein_hardware;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="groestl_hash" value="<?php echo $groestl_hardware;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="qubit_hash" value="<?php echo $qubit_hardware;?>" size="5">
 				<td/>
 			</tr>
 			<tr>
@@ -359,19 +359,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					 Pool fees: (Percentage)
 				<td/>
 				<td>
-					
+					<input type="text" name="sha_hash" value="<?php echo $sha_poolfee;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="scrypt_hash" value="<?php echo $scrypt_poolfee;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="skein_hash" value="<?php echo $skein_poolfee;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="groestl_hash" value="<?php echo $groestl_poolfee;?>" size="5">
 				<td/>
 				<td>
-					
+					<input type="text" name="qubit_hash" value="<?php echo $qubit_poolfee;?>" size="5">
 				<td/>
 			<tr/>
 		</table>
@@ -390,16 +390,20 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<tr/>
 			<tr>
 				<td>
-					num
+					<input type="text" name="sha_hash" value="<?php echo $power_cost;?>" size="5">
 				<td/>
 				<td>
-					num
+					<input type="text" name="sha_hash" value="<?php echo $myr_price;?>" size="5">
 				<td/>
 				<td>
-					numb
+					<input type="text" name="sha_hash" value="<?php echo $btc_price;?>" size="5">
 				<td/>
 			<tr/>
 		</table></center>
+		
+		<table class="resultsTable">
+			
+		</table>
 		
 		
 	</div>
