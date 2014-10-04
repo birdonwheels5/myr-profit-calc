@@ -55,18 +55,14 @@ div.welcome
 	padding-left:10px;
 }
 
-tr
+table 
 {
-	#padding-bottom:10px;
-	border-style:none none none solid;
-	border-width:1px;
+    border-collapse: collapse;
 }
 
-td
+table, th, td 
 {
-	#padding-right:10px;
-	border-style:none none none solid;
-	border-width:1px;
+    border: 1px solid black;
 }
 
 nav
