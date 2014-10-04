@@ -247,7 +247,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 
 	<center><div class="inputHolder">
 	
-		<table>
+		<center><table>
 			<tr>
 				<td>
 					Algorithm: 
@@ -369,7 +369,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 				<td/>
 			<tr/>
 		</table>
-		<center><table>
+		<table>
 			<br/>
 			<tr>
 				<td>
@@ -393,7 +393,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					numb
 				<td/>
 			<tr/>
-		</table>
+		</table></center>
 		
 		
 	</div>
