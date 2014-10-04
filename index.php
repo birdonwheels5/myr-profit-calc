@@ -295,25 +295,25 @@
 			$qubit_values[0] = number_format($qubit_blocks_per_day, 2, '.', ',');
 			
 			// Total MYR made
-			$sha_values[1] = number_format(($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee), 2, '.', ',');
-			$scrypt_values[1] = number_format(($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee), 2, '.', ',');
-			$skein_values[1] = number_format(($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee), 2, '.', ',');
-			$groestl_values[1] = number_format(($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee), 2, '.', ',');
-			$qubit_values[1] = number_format(($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee), 2, '.', ',');
+			$sha_values[1] = number_format((($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee)), 2, '.', ',');
+			$scrypt_values[1] = number_format((($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee)), 2, '.', ',');
+			$skein_values[1] = number_format((($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee)), 2, '.', ',');
+			$groestl_values[1] = number_format((($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee)), 2, '.', ',');
+			$qubit_values[1] = number_format((($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee)), 2, '.', ',');
 			
 			// Total BTC made
-			$sha_values[2] = number_format(($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee) * $myr_price, 8, '.', ',');
-			$scrypt_values[2] = number_format(($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee) * $myr_price, 8, '.', ',');
-			$skein_values[2] = number_format(($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee) * $myr_price, 8, '.', ',');
-			$groestl_values[2] = number_format(($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee) * $myr_price, 8, '.', ',');
-			$qubit_values[2] = number_format(($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee) * $myr_price, 8, '.', ',');
+			$sha_values[2] = number_format((($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee) * $myr_price), 8, '.', ',');
+			$scrypt_values[2] = number_format((($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee) * $myr_price), 8, '.', ',');
+			$skein_values[2] = number_format((($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee) * $myr_price), 8, '.', ',');
+			$groestl_values[2] = number_format((($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee) * $myr_price), 8, '.', ',');
+			$qubit_values[2] = number_format((($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee) * $myr_price), 8, '.', ',');
 			
 			// Total USD made
-			$sha_values[3] = number_format(($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee) * $myr_price * $btc_price, 4, '.', ',');
-			$scrypt_values[3] = number_format(($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee) * $myr_price * $btc_price, 4, '.', ',');
-			$skein_values[3] = number_format(($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee) * $myr_price * $btc_price, 4, '.', ',');
-			$groestl_values[3] = number_format(($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee) * $myr_price * $btc_price, 4, '.', ',');
-			$qubit_values[3] = number_format(($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee) * $myr_price * $btc_price, 4, '.', ',');
+			$sha_values[3] = number_format((($sha_blocks_per_day * $coins_per_block) - (($sha_blocks_per_day * $coins_per_block) * $sha_fee) * $myr_price * $btc_price), 4, '.', ',');
+			$scrypt_values[3] = number_format((($scrypt_blocks_per_day * $coins_per_block) - (($scrypt_blocks_per_day * $coins_per_block) * $scrypt_fee) * $myr_price * $btc_price), 4, '.', ',');
+			$skein_values[3] = number_format((($skein_blocks_per_day * $coins_per_block) - (($skein_blocks_per_day * $coins_per_block) * $skein_fee) * $myr_price * $btc_price), 4, '.', ',');
+			$groestl_values[3] = number_format((($groestl_blocks_per_day * $coins_per_block) - (($groestl_blocks_per_day * $coins_per_block) * $groestl_fee) * $myr_price * $btc_price), 4, '.', ',');
+			$qubit_values[3] = number_format((($qubit_blocks_per_day * $coins_per_block) - (($qubit_blocks_per_day * $coins_per_block) * $qubit_fee) * $myr_price * $btc_price), 4, '.', ',');
 			
 			// Total power consumption
 			$sha_values[4] = number_format(($sha_power * 24)/1000, 2, '.', ',');
