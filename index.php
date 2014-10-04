@@ -338,62 +338,62 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<tr/>
 			<tr>
 				<td>
-					 Power Usage: (Watts)
+					 Power Usage: 
 				<td/>
 				<td>
-					<input type="text" name="sha_power" value="<?php echo $sha_power;?>" size="5">
+					<input type="text" name="sha_power" value="<?php echo $sha_power;?>" size="5"> watts
 				<td/>
 				<td>
-					<input type="text" name="scrypt_power" value="<?php echo $scrypt_power;?>" size="5">
+					<input type="text" name="scrypt_power" value="<?php echo $scrypt_power;?>" size="5"> watts
 				<td/>
 				<td>
-					<input type="text" name="skein_power" value="<?php echo $skein_power;?>" size="5">
+					<input type="text" name="skein_power" value="<?php echo $skein_power;?>" size="5"> watts
 				<td/>
 				<td>
-					<input type="text" name="groestl_power" value="<?php echo $groestl_power;?>" size="5">
+					<input type="text" name="groestl_power" value="<?php echo $groestl_power;?>" size="5"> watts
 				<td/>
 				<td>
-					<input type="text" name="qubit_power" value="<?php echo $qubit_power;?>" size="5">
+					<input type="text" name="qubit_power" value="<?php echo $qubit_power;?>" size="5"> watts
 				<td/>
 			<tr/>
 			<tr>
 				<td>
-					 Hardware Cost: (In US dollars)
+					 Hardware Cost: 
 				<td/>
 				<td>
-					<input type="text" name="sha_hardware" value="<?php echo $sha_hardware;?>" size="5">
+					$ <input type="text" name="sha_hardware" value="<?php echo $sha_hardware;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="scrypt_hardware" value="<?php echo $scrypt_hardware;?>" size="5">
+					$ <input type="text" name="scrypt_hardware" value="<?php echo $scrypt_hardware;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="skein_hardware" value="<?php echo $skein_hardware;?>" size="5">
+					$ <input type="text" name="skein_hardware" value="<?php echo $skein_hardware;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="groestl_hardware" value="<?php echo $groestl_hardware;?>" size="5">
+					$ <input type="text" name="groestl_hardware" value="<?php echo $groestl_hardware;?>" size="5">
 				<td/>
 				<td>
-					<input type="text" name="qubit_hardware" value="<?php echo $qubit_hardware;?>" size="5">
+					$ <input type="text" name="qubit_hardware" value="<?php echo $qubit_hardware;?>" size="5">
 				<td/>
 			</tr>
 			<tr>
 				<td>
-					 Pool fees: (Percentage)
+					 Pool fees: 
 				<td/>
 				<td>
-					<input type="text" name="sha_poolfee" value="<?php echo $sha_poolfee;?>" size="5">
+					<input type="text" name="sha_poolfee" value="<?php echo $sha_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					<input type="text" name="scrypt_poolfee" value="<?php echo $scrypt_poolfee;?>" size="5">
+					<input type="text" name="scrypt_poolfee" value="<?php echo $scrypt_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					<input type="text" name="skein_poolfee" value="<?php echo $skein_poolfee;?>" size="5">
+					<input type="text" name="skein_poolfee" value="<?php echo $skein_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					<input type="text" name="groestl_poolfee" value="<?php echo $groestl_poolfee;?>" size="5">
+					<input type="text" name="groestl_poolfee" value="<?php echo $groestl_poolfee;?>" size="5"> %
 				<td/>
 				<td>
-					<input type="text" name="qubit_poolfee" value="<?php echo $qubit_poolfee;?>" size="5">
+					<input type="text" name="qubit_poolfee" value="<?php echo $qubit_poolfee;?>" size="5"> %
 				<td/>
 			<tr/>
 		</table>
@@ -401,7 +401,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<br/>
 			<tr>
 				<td>
-					Power Cost ($/Kwh) &nbsp;
+					Power Cost &nbsp;
 				<td/>
 				<td>
 					MYR/BTC &nbsp;
@@ -412,13 +412,13 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<tr/>
 			<tr>
 				<td>
-					<input type="text" name="power_cost" value="<?php echo $power_cost;?>" size="5">
+					<input type="text" name="power_cost" value="<?php echo $power_cost;?>" size="5"> $/Kwh
 				<td/>
 				<td>
-					<input type="text" name="myr_price" value="<?php echo $myr_price;?>" size="7">
+					<input type="text" name="myr_price" value="<?php echo $myr_price;?>" size="7"> BTC
 				<td/>
 				<td>
-					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5">
+					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5"> USD
 				<td/>
 			<tr/>
 		</table>
