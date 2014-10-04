@@ -55,6 +55,18 @@ div.welcome
 	padding-left:10px;
 }
 
+tr
+{
+	padding-bottom:1em;
+	border-bottom:solid;
+}
+
+td
+{
+	padding-right:1em;
+	border-right:solid;
+	border-left:solid;
+
 nav
 {
 	width:30%;
