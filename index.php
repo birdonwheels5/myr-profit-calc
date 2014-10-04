@@ -424,10 +424,10 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			<tr/>
 			<tr>
 				<td>
-					&nbsp;
+					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
 				</td>
 				<td>
-					<input type="submit" name="submit" value="Submit">
+					
 				</td>
 				<td>
 					&nbsp;
