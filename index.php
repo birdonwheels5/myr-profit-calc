@@ -422,15 +422,11 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="text" name="btc_price" value="<?php echo $btc_price;?>" size="5">
 				<td/>
 			<tr/>
+		</table>
+		<table class="mainTable">
 			<tr>
 				<td>
 					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
-				</td>
-				<td>
-					
-				</td>
-				<td>
-					&nbsp;
 				</td>
 			</tr>
 		</table></center>
