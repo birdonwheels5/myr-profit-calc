@@ -169,7 +169,6 @@
 			else
 			{
 				$sha_hashrate = $_POST["sha_hash"]; // Multiplied later to be in GH/s
-				$sha_input = $sha_hashrate;
 			}
 			
 
@@ -180,7 +179,6 @@
 			else
 			{
 				$scrypt_hashrate = $_POST["scrypt_hash"];
-				$scrypt_input = $scrypt_hashrate;
 			}
 			
 
@@ -191,7 +189,6 @@
 			else
 			{
 				$skein_hashrate = $_POST["skein_hash"];
-				$skein_input = $skein_hashrate;
 			}
 			
 
@@ -202,7 +199,6 @@
 			else
 			{
 				$groestl_hashrate = $_POST["groestl_hash"];
-				$groestl_input = $groestl_hashrate;
 			}
 			
 
@@ -213,7 +209,6 @@
 			else
 			{
 				$qubit_hashrate = $_POST["qubit_hash"];
-				$qubit_input = $qubit_hashrate;
 			}
 			
 		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
@@ -438,6 +433,11 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="text" name="sha_hash" value="<?php echo $btc_price;?>" size="5">
 				<td/>
 			<tr/>
+			<tr>
+				<td>
+					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear">
+				</td>
+			</tr>
 		</table></center>
 		
 		<table class="resultsTable">
