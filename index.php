@@ -245,59 +245,64 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
         <p><h3>Algorithm Statistics:</h3> 
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-	<center><div class="box">
-	<p> </p>
+	<center><div class="container">
+	
+		<div class="box">
+			<p> </p>
+		</div>
+		
+		<div class="box">
+			Sha256
+		</div>
+		
+		<div class="box">
+			Scrypt
+		</div>
+		
+		<div class="box">
+			Skein
+		</div>
+		
+		<div class="box">
+			Groestl
+		</div>
+		
+		<div class="box">
+			Qubit
+		</div>
+		
+		<br/> <!-- -------------------------------------------------- -->
+		
+		<div class="box">
+			Hashrate: 
+		</div>
+		
+		<div class="box">
+			Number 
+		</div>
+		
+		<div class="box">
+			Number 
+		</div>
+		
+		<div class="box">
+			Number 
+		</div>
+		
+		<div class="box">
+			Number 
+		</div>
+		
+		<div class="box">
+			Number 
+		</div>
+		
+		<br/> <!-- -------------------------------------------------- -->
+		
+		
+		
+		
 	</div>
-	
-	<div class="box">
-	Sha256
-	</div>
-	
-	<div class="box">
-	Scrypt
-	</div>
-	
-	<div class="box">
-	Skein
-	</div>
-	
-	<div class="box">
-	Groestl
-	</div>
-	
-	<div class="box">
-	Qubit
-	</div>
-	
-	<br/> <!-- -------------------------------------------------- -->
-	
-	<div class="box">
-	Hashrate: 
-	</div>
-	
-	<div class="box">
-	Number 
-	</div>
-	
-	<div class="box">
-	Number 
-	</div>
-	
-	<div class="box">
-	Number 
-	</div>
-	
-	<div class="box">
-	Number 
-	</div>
-	
-	<div class="box">
-	Number 
-	</div>
-	
-	<br/> <!-- -------------------------------------------------- -->
-	
-	
 	  
 	</form>
 
