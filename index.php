@@ -606,19 +606,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					Total Power Consumption: 
 				<td/>
 				<td>
-					<?php print $results[0][4]; ?> $
+					<?php print $results[0][4]; ?> Kwh
 				<td/>
 				<td>
-					<?php print $results[1][4]; ?> $
+					<?php print $results[1][4]; ?> Kwh
 				<td/>
 				<td>
-					<?php print $results[2][4]; ?> $
+					<?php print $results[2][4]; ?> Kwh
 				<td/>
 				<td>
-					<?php print $results[3][4]; ?> $
+					<?php print $results[3][4]; ?> Kwh
 				<td/>
 				<td>
-					<?php print $results[4][4]; ?> $
+					<?php print $results[4][4]; ?> Kwh
 				<td/>
 			</tr>
 			<tr>
