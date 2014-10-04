@@ -59,5 +59,31 @@ function get_avg_diffs($avg)
 	
 	return $diffs;
 }
+
+function get_myr_price()
+{
+	$myr_price = 0;
+	
+	$url = fopen("http://pubapi.cryptsy.com/api.php?method=singlemarketdata&marketid=200", "r");
+	
+	$json = json_decode(stream_get_contents($url));
+	
+	$myr_price = $json->["lasttradeprice"];
+	
+	return $myr_price;
+}
+
+function get_btc_price()
+{
+	$btc_price = 0;
+	
+	$url = fopen("https://www.bitstamp.net/api/ticker/", "r");
+	
+	$json = json_decode(stream_get_contents($url));
+	
+	$btc_price = $json->["ask"];
+	
+	return $btc_price;
+}
 	
 ?>
