@@ -248,11 +248,11 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 	<center><div class="inputHolder">
 	
 		<div class="box">
-			<p> </p>
+			Algorithm: 
 		</div>
 		
 		<div class="box">
-			Sha256
+			Sha256d
 		</div>
 		
 		<div class="box">
@@ -278,23 +278,23 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		</div>
 		
 		<div class="box">
-			Number 
+			<input type="text" name="sha_hash" value="<?php echo $sha_hashrate;?>" size="4">
 		</div>
 		
 		<div class="box">
-			Number 
+			<input type="text" name="scrypt_hash" value="<?php echo $scrypt_hashrate;?>" size="4">
 		</div>
 		
 		<div class="box">
-			Number 
+			<input type="text" name="skein_hash" value="<?php echo $skein_hashrate;?>" size="4">
 		</div>
 		
 		<div class="box">
-			Number 
+			<input type="text" name="groestl_hash" value="<?php echo $groestl_hashrate;?>" size="4">
 		</div>
 		
 		<div class="box">
-			Number 
+			<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="4">
 		</div>
 		
 		<br/><br/> <!-- -------------------------------------------------- -->
