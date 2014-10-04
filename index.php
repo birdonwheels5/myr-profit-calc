@@ -603,19 +603,19 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					BTC Equivalent: 
 				<td/>
 				<td>
-					<?php print $results[0][2]; ?> BTC
+					<?php print $results[0][2]; ?> &#x0E3F <!-- BTC symbol -->
 				<td/>
 				<td>
-					<?php print $results[1][2]; ?> BTC
+					<?php print $results[1][2]; ?> &#x0E3F
 				<td/>
 				<td>
-					<?php print $results[2][2]; ?> BTC
+					<?php print $results[2][2]; ?> &#x0E3F
 				<td/>
 				<td>
-					<?php print $results[3][2]; ?> BTC
+					<?php print $results[3][2]; ?> &#x0E3F
 				<td/>
 				<td>
-					<?php print $results[4][2]; ?> BTC
+					<?php print $results[4][2]; ?> &#x0E3F
 				<td/>
 			</tr>
 			<tr>
@@ -730,7 +730,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print 0;
+							print "&infin";
 						}
 					?> days
 				<td/>
@@ -742,7 +742,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print 0;
+							print "&infin";
 						}
 					?> days
 				<td/>
@@ -754,7 +754,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print 0;
+							print "&infin";
 						}
 					?> days
 				<td/>
@@ -766,7 +766,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print 0;
+							print "&infin";
 						}
 					?> days
 				<td/>
@@ -778,7 +778,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 						}
 						else
 						{
-							print 0;
+							print "&infin";
 						}
 					?> days
 				<td/>
