@@ -121,11 +121,11 @@ div.resultsTable
     height:80%;
 }
 
-div.resultsTable, td, th
-{
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+#div.resultsTable, td, th
+#{
+#    border: 1px solid black;
+#    border-collapse: collapse;
+#}
 
 td
 {
