@@ -723,19 +723,64 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					Time to ROI: 
 				<td/>
 				<td>
-					<?php print $results[0][7]; ?> days
+					<?php 
+						if($results[0][7] > 0)
+						{
+							print $results[0][7]; 
+						}
+						else
+						{
+							print 0;
+						}
+					?> days
 				<td/>
 				<td>
-					<?php print $results[1][7]; ?> days
+					<?php 
+						if($results[1][7] > 0)
+						{
+							print $results[1][7]; 
+						}
+						else
+						{
+							print 0;
+						}
+					?> days
 				<td/>
 				<td>
-					<?php print $results[2][7]; ?> days
+					<?php 
+						if($results[2][7] > 0)
+						{
+							print $results[2][7]; 
+						}
+						else
+						{
+							print 0;
+						}
+					?> days
 				<td/>
 				<td>
-					<?php print $results[3][7]; ?> days
+					<?php 
+						if($results[3][7] > 0)
+						{
+							print $results[3][7]; 
+						}
+						else
+						{
+							print 0;
+						}
+					?> days
 				<td/>
 				<td>
-					<?php print $results[4][7]; ?> days
+					<?php 
+						if($results[4][7] > 0)
+						{
+							print $results[4][7]; 
+						}
+						else
+						{
+							print 0;
+						}
+					?> days
 				<td/>
 			</tr>
 		</table>
