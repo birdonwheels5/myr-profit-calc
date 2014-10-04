@@ -245,7 +245,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
         <p><h3>Algorithm Statistics:</h3> 
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-	<div class="box">
+	<center><div class="box">
 	<p> </p>
 	</div>
 	
