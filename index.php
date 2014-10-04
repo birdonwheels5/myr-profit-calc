@@ -149,8 +149,6 @@
 			$power_cost = check_zero($power_cost);
 		}
 		
-		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
-		
 		if ($_SERVER["REQUEST_METHOD"] == "POST") 
 		{
 			
@@ -184,9 +182,6 @@
 			$myr_price = check_post($_POST["myr_price"], $myr_price);
 			
 			$btc_price = check_post($_POST["btc_price"], $btc_price);
-			
-		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
-		
 		
 		if(search_ip_address($user_array, $ip) >= 0)
 		{
@@ -218,7 +213,13 @@
 
 		function calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate)
 		{
-			global $sha_profit, $scrypt_profit, $skein_profit, $groestl_profit, $qubit_profit, $diff;
+			global $sha_profit, $scrypt_profit, $skein_profit, $groestl_profit, $qubit_profit, 
+			$sha_diff, $scrypt_diff, $skein_diff, $groestl_diff, $qubit_diff, 
+			$sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, 
+			$sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, 
+			$sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, 
+			$sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, 
+			$power_cost, $myr_price, $btc_price;
 			
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
 			$coins_per_block = 1000; // Current block reward.
@@ -431,7 +432,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		</table></center>
 		
 		<table class="resultsTable">
-			<?php calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
+			<?php calculate_profit();
 			print $sha_profit . " " . $scrypt_profit . " " . $skein_profit . " " . $groestl_profit . " " . $qubit_profit; ?>
 		</table>
 		
