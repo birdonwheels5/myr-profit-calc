@@ -388,22 +388,22 @@
 		<center><table class="mainTable">
 			<tr>
 				<td>
-					Algorithm: 
+					<b>Algorithm: </b>
 				<td/>
 				<td>
-					Sha256d
+					<b>Sha256d</b>
 				<td/>
 				<td>
-					Scrypt
+					<b>Scrypt</b>
 				<td/>
 				<td>
-					Skein
+					<b>Skein</b>
 				<td/>
 				<td>
-					Groestl
+					<b>Groestl</b>
 				<td/>
 				<td>
-					Qubit
+					<b>Qubit</b>
 				<td/>
 			</tr>
 			<tr>
