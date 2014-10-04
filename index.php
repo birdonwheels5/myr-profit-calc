@@ -268,7 +268,6 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					Qubit
 				<td/>
 			</tr>
-			<br/>
 			<tr>
 				<td>
 					 Difficulty: (24 hr average)
@@ -289,7 +288,6 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					
 				<td/>
 			</tr>
-			<br/>
 			<tr>
 				<td>
 					 Hashrate: 
@@ -310,7 +308,6 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					<input type="text" name="qubit_hash" value="<?php echo $qubit_hashrate;?>" size="4"> MH/s
 				<td/>
 			<tr/>
-			<br/>
 			<tr>
 				<td>
 					 Power Usage: (Watts)
