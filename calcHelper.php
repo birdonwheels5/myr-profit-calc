@@ -85,5 +85,18 @@ function get_btc_price()
 	
 	return $btc_price;
 }
+
+function get_block_value()
+{
+	$block_value = 0;
+	
+	$url = fopen("http://birdonwheels5.no-ip.org:5567/local_stats", "r");
+	
+	$json = json_decode(stream_get_contents($url));
+	
+	$block_value = $json->{"block_value"};
+	
+	return $block_value;
+}
 	
 ?>
