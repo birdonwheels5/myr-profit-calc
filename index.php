@@ -190,6 +190,8 @@
 			$btc_price = check_post($_POST["btc_price"], $btc_price);
 			
 			$coins_per_block = check_post($_POST["coins_per_block"], $coins_per_block);
+			
+			$results = calculate();
 		
 		if(search_ip_address($user_array, $ip) >= 0)
 		{
@@ -205,8 +207,6 @@
 			$scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, $sha_poolfee, $scrypt_poolfee, 
 			$skein_poolfee, $groestl_poolfee, $qubit_poolfee, $power_cost);
 		}
-		
-		$results = calculate();
 		
 		if($_POST["clear"])
 		{
