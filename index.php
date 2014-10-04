@@ -215,25 +215,98 @@
 		}
 }
 
-		function calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate)
+		function calculate()
 		{
-			global $sha_profit, $scrypt_profit, $skein_profit, $groestl_profit, $qubit_profit, 
-			$sha_diff, $scrypt_diff, $skein_diff, $groestl_diff, $qubit_diff, 
+			global $sha_diff, $scrypt_diff, $skein_diff, $groestl_diff, $qubit_diff, 
 			$sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate, 
 			$sha_power, $scrypt_power, $skein_power, $groestl_power, $qubit_power, 
 			$sha_hardware, $scrypt_hardware, $skein_hardware, $groestl_hardware, $qubit_hardware, 
 			$sha_poolfee, $scrypt_poolfee, $skein_poolfee, $groestl_poolfee, $qubit_poolfee, 
-			$power_cost, $myr_price, $btc_price;
+			$power_cost, $myr_price, $btc_price, $coins_per_block, ;
 			
 			$hash_multiplier = 1000000; // Gives you hashrate in hashes/sec for calculations
 			$coins_per_block = 1000; // Current block reward.
-		
-					// 		  Units:     Sec	Diff	   ???	   hashrate MH/s
-			$sha_profit = number_format((86400 / (($diff[0] * pow(2, 32)) / (($sha_hashrate * 1000) * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
-			$scrypt_profit = number_format((86400 / (($diff[1] * pow(2, 32)) / ($scrypt_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
-			$skein_profit = number_format((86400 / (($diff[2] * pow(2, 32)) / ($skein_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
-			$groestl_profit = number_format((86400 / (($diff[3] * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
-			$qubit_profit = number_format((86400 / (($diff[4] * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier))) * $coins_per_block, 1, '.', ',');
+			
+			$array_package = array();
+			
+			// What the values are, in order:
+			// blocks/day, MYR total, BTC total, USD total, power consumption, power cost in USD, profit made in USD, time to ROI
+			$sha_values = array();
+			$scrypt_values = array();
+			$skein_values = array();
+			$groestl_values = array();
+			$qubit_values = array();
+			
+				// 		  Units:     Sec    	Diff	   ???	       hashrate MH/s
+			$sha_blocks_per_day = (86400 / (($sha_diff * pow(2, 32)) / (($sha_hashrate * 1000) * $hash_multiplier)));
+			$scrypt_blocks_per_day = (86400 / (($scrypt_diff * pow(2, 32)) / ($scrypt_hashrate * $hash_multiplier)));
+			$skein_blocks_per_day = (86400 / (($skein_diff * pow(2, 32)) / ($skein_hashrate * $hash_multiplier)))
+			$groestl_blocks_per_day = (86400 / (($groestl_diff * pow(2, 32)) / ($groestl_hashrate * $hash_multiplier)))
+			$qubit_blocks_per_day = (86400 / (($diff[4] * pow(2, 32)) / ($qubit_hashrate * $hash_multiplier)))
+			
+			// Blocks per day
+			$sha_values[0] = number_format($sha_blocks_per_day, 1, '.', ',');
+			$scrypt_values[0] = number_format($scrypt_blocks_per_day, 1, '.', ',');
+			$skein_values[0] = number_format($skein_blocks_per_day, 1, '.', ',');
+			$groestl_values[0] = number_format($groestl_blocks_per_day, 1, '.', ',');
+			$qubit_values[0] = number_format($qubit_blocks_per_day, 1, '.', ',');
+			
+			// Total MYR made
+			$sha_values[1] = number_format($sha_blocks_per_day * $coins_per_block, 1, '.', ',');
+			$scrypt_values[1] = number_format($scrypt_blocks_per_day * $coins_per_block, 1, '.', ',');
+			$skein_values[1] = number_format($skein_blocks_per_day * $coins_per_block, 1, '.', ',');
+			$groestl_values[1] = number_format($groestl_blocks_per_day * $coins_per_block, 1, '.', ',');
+			$qubit_values[1] = number_format($qubit_blocks_per_day * $coins_per_block, 1, '.', ',');
+			
+			// Total BTC made
+			$sha_values[2] = number_format($sha_blocks_per_day * $coins_per_block * $myr_price, 1, '.', ',');
+			$scrypt_values[2] = number_format($scrypt_blocks_per_day * $coins_per_block * $myr_price, 1, '.', ',');
+			$skein_values[2] = number_format($skein_blocks_per_day * $coins_per_block * $myr_price, 1, '.', ',');
+			$groestl_values[2] = number_format($groestl_blocks_per_day * $coins_per_block * $myr_price, 1, '.', ',');
+			$qubit_values[2] = number_format($qubit_blocks_per_day * $coins_per_block * $myr_price, 1, '.', ',');
+			
+			// Total USD made
+			$sha_values[3] = number_format($sha_blocks_per_day * $coins_per_block * $myr_price * $btc_price, 1, '.', ',');
+			$scrypt_values[3] = number_format($scrypt_blocks_per_day * $coins_per_block * $myr_price * $btc_price, 1, '.', ',');
+			$skein_values[3] = number_format($skein_blocks_per_day * $coins_per_block * $myr_price * $btc_price, 1, '.', ',');
+			$groestl_values[3] = number_format($groestl_blocks_per_day * $coins_per_block * $myr_price * $btc_price, 1, '.', ',');
+			$qubit_values[3] = number_format($qubit_blocks_per_day * $coins_per_block * $myr_price * $btc_price, 1, '.', ',');
+			
+			// Total power consumption
+			$sha_values[4] = number_format(($sha_power * 24)/1000, 1, '.', ',');
+			$scrypt_values[4] = number_format(($scrypt_power * 24)/1000, 1, '.', ',');
+			$skein_values[4] = number_format(($skein_power * 24)/1000, 1, '.', ',');
+			$groestl_values[4] = number_format(($groestl_power * 24)/1000, 1, '.', ',');
+			$qubit_values[4] = number_format(($qubit_power * 24)/1000, 1, '.', ',');
+			
+			// Total power cost
+			$sha_values[5] = number_format(($sha_power * 24)/1000 * $power_cost, 1, '.', ',');
+			$scrypt_values[5] = number_format(($scrypt_power * 24)/1000 * $power_cost, 1, '.', ',');
+			$skein_values[5] = number_format(($skein_power * 24)/1000 * $power_cost, 1, '.', ',');
+			$groestl_values[5] = number_format(($groestl_power * 24)/1000 * $power_cost, 1, '.', ',');
+			$qubit_values[5] = number_format(($qubit_power * 24)/1000 * $power_cost, 1, '.', ',');
+			
+			// Total profit made
+			$sha_values[6] = $sha_values[3] - $sha_values[5];
+			$scrypt_values[6] = $scrypt_values[3] - $scrypt_values[5];
+			$skein_values[6] = $skein_values[3] - $skein_values[5];
+			$groestl_values[6] = $groestl_values[3] - $groestl_values[5];
+			$qubit_values[6] = $qubit_values[3] - $qubit_values[5];
+			
+			// Time to ROI
+			$sha_values[7] = $sha_hardware/$sha_values[6];
+			$scrypt_values[7] = $scrypt_hardware/$scrypt_values[6];
+			$skein_values[7] = $skein_hardware/$skein_values[6];
+			$groestl_values[7] = $groestl_hardware/$groestl_values[6];
+			$qubit_values[7] = $qubit_hardware/$qubit_values[6];
+			
+			$array_package[0] = $sha_values;
+			$array_package[1] = $scrypt_values;
+			$array_package[2] = $skein_values;
+			$array_package[3] = $groestl_values;
+			$array_package[4] = $qubit_values;
+			
+			return $array_package;
 		}
 		
 		// Used to replace 0's with an empty string for ease of user input
@@ -442,8 +515,10 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 		</table></center>
 		
 		<table class="resultsTable">
-			<?php calculate_profit();
-			print $sha_profit . " " . $scrypt_profit . " " . $skein_profit . " " . $groestl_profit . " " . $qubit_profit; ?>
+			<?php
+			$results = array();
+			$results = calculate();
+			print $results[0][4] . ", " . $results[1][4] . ", " . $results[2][4] . ", " . $results[3][4] . ", " . $results[4][4]; ?>
 		</table>
 		
 		
