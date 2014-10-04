@@ -98,16 +98,19 @@ div.resultsBox
 	padding-left:10px;
 }
 
+table
+{
+	border-collapse: collapse;
+}
+
 div.mainTable
 {
-    border-collapse: collapse;
     width:100%;
     height:80%;
 }
 
 div.subTable
 {
-    border-collapse: collapse;
     width:50%;
     height:40%;
 }
