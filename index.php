@@ -250,11 +250,23 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 	</div>
 	
 	<div class="box">
-	
+	Sha256
 	</div>
 	
 	<div class="box">
+	Scrypt
+	</div>
 	
+	<div class="box">
+	Skein
+	</div>
+	
+	<div class="box">
+	Groestl
+	</div>
+	
+	<div class="box">
+	Qubit
 	</div>
 	  
 	</form>
