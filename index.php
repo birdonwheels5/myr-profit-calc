@@ -271,7 +271,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			Qubit
 		</div>
 		
-		<br/> <!-- -------------------------------------------------- -->
+		<br/><br/> <!-- -------------------------------------------------- -->
 		
 		<div class="box">
 			Hashrate: 
@@ -297,7 +297,7 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 			Number 
 		</div>
 		
-		<br/> <!-- -------------------------------------------------- -->
+		<br/><br/> <!-- -------------------------------------------------- -->
 		
 		
 		
