@@ -52,11 +52,11 @@
 		$diff = array();
 		$diff = get_avg_diffs($avg);
 		
-		$sha_difficulty = $diff[0];
-		$scrypt_difficulty = $diff[1];
-		$skein_difficulty = $diff[2];
-		$groestl_difficulty = $diff[3];
-		$qubit_difficulty = $diff[4];
+		$sha_diff = number_format($diff[0], 2, '.', '');
+		$scrypt_diff = number_format($diff[1], 2, '.', '');
+		$skein_diff = number_format($diff[2], 2, '.', '');
+		$groestl_diff = number_format($diff[3], 2, '.', '');
+		$qubit_diff = number_format($diff[4], 2, '.', '');
 		
 		$sha_hashrate = "";
 		$scrypt_hashrate = "";
@@ -118,7 +118,7 @@
 			
 			// Now to set fields to blank if they are 0...
 			
-			$sha_hashrate = check_zero($sha_hashrate);
+			/*$sha_hashrate = check_zero($sha_hashrate);
 			$scrypt_hashrate = check_zero($scrypt_hashrate);
 			$skein_hashrate = check_zero($skein_hashrate);
 			$groestl_hashrate = check_zero($groestl_hashrate);
@@ -142,19 +142,8 @@
 			$groestl_poolfee = check_zero($groestl_poolfee);
 			$qubit_poolfee = check_zero($qubit_poolfee);
 			
-			$power_cost = check_zero($power_cost);
+			$power_cost = check_zero($power_cost);*/
 		}
-		
-		$sha_diff = number_format($diff[0], 2, '.', '');
-		
-		$scrypt_diff = number_format($diff[1], 2, '.', '');
-		
-		$skein_diff = number_format($diff[2], 2, '.', '');
-		
-		$groestl_diff = number_format($diff[3], 2, '.', '');
-		
-		$qubit_diff = number_format($diff[4], 2, '.', '');
-		
 		
 		calculate_profit($sha_hashrate, $scrypt_hashrate, $skein_hashrate, $groestl_hashrate, $qubit_hashrate);
 		
