@@ -68,7 +68,7 @@ function get_myr_price()
 	
 	$json = json_decode(stream_get_contents($url));
 	
-	$myr_price = $json->{"markets:myr:lasttradeprice"};
+	$myr_price = $json->{"lasttradeprice"};
 	
 	return $myr_price;
 }
