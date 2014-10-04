@@ -368,6 +368,8 @@ For more information, visit <a href="http://myriadplatform.org" target="_blank">
 					
 				<td/>
 			<tr/>
+		</table>
+		<table>
 			<br/>
 			<tr>
 				<td>
