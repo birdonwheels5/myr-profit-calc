@@ -423,7 +423,7 @@
 			<article>
 	<div class="inputHolder">			
 	<div class="welcome">
-		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
+		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:3%;"</img>  Myriadcoin Profitability Calculator</h2></center>
         <p>
 	Welcome! This tool lets you figure out mining profitability for all algorithms at once, or 
 	however many you want. You don't need to fill out all the fields. The default difficulty is calculated from the average of difficulties
