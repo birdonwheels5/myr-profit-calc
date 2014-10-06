@@ -85,6 +85,15 @@ div.inputBox
 	padding-left:10px;
 }
 
+div.smallBox
+{
+	width:25%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:25px;
+	padding-left:10px;
+}
+
 div.resultsBox
 {
 	width:75%;
@@ -155,7 +164,6 @@ article
 	text-align:left;
 	padding-left:2%;
 	padding-right:2%;
-	color:white;
 }
 
 # Depreciated
