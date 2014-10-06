@@ -35,6 +35,7 @@
 		$user_array = read_users();
 		
 		$avg = 24;
+		$average_string = "(24 hr average)";
 		
 		// Declare variables
 		$diff = array();
@@ -260,6 +261,35 @@
 			
 			$results = calculate();
 		}
+		if($_POST["3_day"])
+		{
+			$average_string = "(3 day average)";
+			
+			$diff = get_avg_diffs(72);
+			
+			$sha_diff = number_format($diff[0], 2, '.', '');
+			$scrypt_diff = number_format($diff[1], 2, '.', '');
+			$skein_diff = number_format($diff[2], 2, '.', '');
+			$groestl_diff = number_format($diff[3], 2, '.', '');
+			$qubit_diff = number_format($diff[4], 2, '.', '');
+			
+			$results = calculate();
+		}
+		
+		if($_POST["week"])
+		{
+			$average_string = "(1 week average)";
+			
+			$diff = get_avg_diffs(168);
+			
+			$sha_diff = number_format($diff[0], 2, '.', '');
+			$scrypt_diff = number_format($diff[1], 2, '.', '');
+			$skein_diff = number_format($diff[2], 2, '.', '');
+			$groestl_diff = number_format($diff[3], 2, '.', '');
+			$qubit_diff = number_format($diff[4], 2, '.', '');
+			
+			$results = calculate();
+		}
 }
 
 		function calculate()
@@ -397,8 +427,9 @@
         <p>
 	Welcome! This tool lets you figure out mining profitability for all algorithms at once, or 
 	however many you want. You don't need to fill out all the fields (eg. leave Power Cost blank if you're not paying for 
-	electric). The difficulty is calculated from the average of difficulties
-	 taken every hour over the past 24 hours, so it is much more resistant to change than if the current difficulties were used.<br/>
+	electric). The default difficulty is calculated from the average of difficulties
+	 taken every hour over the past 24 hours, so it is much more resistant to change than if the current difficulties were used. Alternatively, you can choose to use the 
+	 average over a longer period of time: 3 days or 1 week.<br/>
 	 Enjoy!<br/><br/>
 	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
@@ -430,7 +461,7 @@
 			</tr>
 			<tr>
 				<td>
-					 Difficulty: (24 hr average)
+					 <?php print "Difficulty: " . $average_string ?>
 				<td/>
 				<td>
 					<input type="text" name="sha_diff" value="<?php echo $sha_diff;?>" size="5">
@@ -563,7 +594,11 @@
 		<table class="mainTable">
 			<tr>
 				<td>
-					<input type="submit" name="submit" value="Submit"><input type="submit" name="clear" value="Clear"><input type="submit" name="reset" value="Reset Price/Difficulty">
+					<input type="submit" name="submit" value="Submit">&nbsp;
+					<input type="submit" name="clear" value="Clear">&nbsp;
+					<input type="submit" name="reset" value="Reset Price/Diff">&nbsp;
+					<input type="submit" name="3_day" value="3 Day Avg Diff">&nbsp;
+					<input type="submit" name="week" value="1 Week Avg Diff">
 				</td>
 			</tr>
 		</table>
