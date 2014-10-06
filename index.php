@@ -844,9 +844,7 @@
 				<td/>
 			</tr>
 		</table></center>
-			<footer>
-				Mining profitability calculator by birdonwheels5. Want to show some love? Donate some MYR: MNYERWCHqrH1EkGNpF4T8o8dGB391A5jmm
-			</footer>
+
 		</div>
 		
 	</div>
@@ -854,6 +852,9 @@
 	</form>
 			</article>
 			
+			<footer>
+				Mining profitability calculator by birdonwheels5. Want to show some love? Donate some MYR: MNYERWCHqrH1EkGNpF4T8o8dGB391A5jmm
+			</footer>
 			
 		</div>
 	</body>
