@@ -434,11 +434,11 @@
 	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
 	</div>
-	<hr/>
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<center>
 		<div class="inputBox">
+		<hr/>
 		<center><table class="mainTable">
 			<tr>
 				<td>
@@ -606,8 +606,9 @@
 		</div>
 		
 		<div class="resultsBox">
-		<hr/>
+		<hr/><br/>
 		<center><b>Results (per day): </b></center>
+		<hr/><br/>
 		<table class="resultsTable">
 			<tr>
 				<td>
