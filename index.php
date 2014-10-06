@@ -204,6 +204,9 @@
 		
 		if($_POST["clear"])
 		{
+			$diff = get_avg_diffs($avg);
+			
+			$average_string = "(24 hr average)";
 			$sha_diff = number_format($diff[0], 2, '.', '');
 			$scrypt_diff = number_format($diff[1], 2, '.', '');
 			$skein_diff = number_format($diff[2], 2, '.', '');
@@ -247,6 +250,8 @@
 		
 		if($_POST["reset"])
 		{
+			$average_string = "(24 hr average)";
+			
 			$sha_diff = number_format($diff[0], 2, '.', '');
 			$scrypt_diff = number_format($diff[1], 2, '.', '');
 			$skein_diff = number_format($diff[2], 2, '.', '');
