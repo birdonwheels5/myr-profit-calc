@@ -610,7 +610,7 @@
 			<div class="smallBox">
 				<hr/>
 				<center><b>Results (per day): </b></center>
-				<hr/><br/>
+				<hr/>
 			</div>
 		
 		<table class="resultsTable">
