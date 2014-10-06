@@ -434,6 +434,7 @@
 	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
 	</div>
+	<hr/>
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 	<center>
@@ -605,10 +606,12 @@
 		</div>
 		
 		<div class="resultsBox">
+		<hr/>
+		<center><b>Results (per day): </b></center>
 		<table class="resultsTable">
 			<tr>
 				<td>
-					<b>Results (per day): </b>
+					<p> </p>
 				<td/>
 				<td>
 					<b>Sha256d</b>
