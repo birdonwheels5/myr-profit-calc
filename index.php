@@ -606,9 +606,13 @@
 		</div>
 		
 		<div class="resultsBox">
-		<hr/><br/>
-		<center><b>Results (per day): </b></center>
-		<hr/><br/>
+		
+			<div class="smallBox">
+				<hr/>
+				<center><b>Results (per day): </b></center>
+				<hr/><br/>
+			</div>
+		
 		<table class="resultsTable">
 			<tr>
 				<td>
