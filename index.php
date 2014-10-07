@@ -613,15 +613,17 @@
 		</table>
 		<table class="mainTable">
 			<tr>
-				<center><td>
+				<td>
 					<input type="submit" name="submit" value="Submit">&nbsp;
 					<input type="submit" name="clear" value="Clear">
-				</td></center>
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<input type="submit" name="reset" value="Reset Price/Diff">&nbsp;
-					<input type="submit" name="24_hr" value="24 Hour Avg Diff">&nbsp;
+					<input type="submit" name="24_hr" value="24 Hour Avg Diff">
+				</td>
+				<td>
 					<input type="submit" name="3_day" value="3 Day Avg Diff">&nbsp;
 					<input type="submit" name="week" value="1 Week Avg Diff">
 				</td>
