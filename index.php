@@ -617,7 +617,9 @@
 					&nbsp;
 				</td>
 				<td>
-					<input type="submit" name="submit" value="Submit">&nbsp;
+					<input type="submit" name="submit" value="Submit">
+				</td>
+				<td>
 					<input type="submit" name="clear" value="Clear">
 				</td>
 			</tr>
