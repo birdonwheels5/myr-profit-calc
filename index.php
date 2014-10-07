@@ -248,15 +248,8 @@
 			$results = calculate();
 		}
 		
-		if($_POST["reset"])
+		if($_POST["refresh_prices"])
 		{
-			$average_string = "(24 hr average)";
-			
-			$sha_diff = number_format($diff[0], 2, '.', '');
-			$scrypt_diff = number_format($diff[1], 2, '.', '');
-			$skein_diff = number_format($diff[2], 2, '.', '');
-			$groestl_diff = number_format($diff[3], 2, '.', '');
-			$qubit_diff = number_format($diff[4], 2, '.', '');
 			
 			$myr_price = get_myr_price();
 			
@@ -625,7 +618,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="submit" name="reset" value="Reset Price/Diff">
+					<input type="submit" name="refresh_prices" value="Refresh Prices">
 				</td>
 				<td>
 					<input type="submit" name="24_hr" value="24 Hour Avg Diff">
