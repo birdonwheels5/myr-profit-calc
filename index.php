@@ -266,6 +266,22 @@
 			
 			$results = calculate();
 		}
+		
+		if($_POST["24_hr"])
+		{
+			$average_string = "(24 hr average)";
+			
+			$diff = get_avg_diffs($avg);
+			
+			$sha_diff = number_format($diff[0], 2, '.', '');
+			$scrypt_diff = number_format($diff[1], 2, '.', '');
+			$skein_diff = number_format($diff[2], 2, '.', '');
+			$groestl_diff = number_format($diff[3], 2, '.', '');
+			$qubit_diff = number_format($diff[4], 2, '.', '');
+			
+			$results = calculate();
+		}
+		
 		if($_POST["3_day"])
 		{
 			$average_string = "(3 day average)";
@@ -428,7 +444,7 @@
 			<article>
 	<div class="inputHolder">			
 	<div class="welcome">
-		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:3%;"</img>  Myriadcoin Profitability Calculator</h2></center>
+		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
         <p>
 	Welcome! This tool lets you figure out mining profitability for all the MYR algorithms. 
 	You don't need to fill out all the fields. The default difficulty is 
@@ -600,8 +616,13 @@
 			<tr>
 				<td>
 					<input type="submit" name="submit" value="Submit">&nbsp;
-					<input type="submit" name="clear" value="Clear">&nbsp;
+					<input type="submit" name="clear" value="Clear">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<input type="submit" name="reset" value="Reset Price/Diff">&nbsp;
+					<input type="submit" name="24_hr" value="24 Hour Avg Diff">&nbsp;
 					<input type="submit" name="3_day" value="3 Day Avg Diff">&nbsp;
 					<input type="submit" name="week" value="1 Week Avg Diff">
 				</td>
