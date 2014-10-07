@@ -444,7 +444,7 @@
 			<article>
 	<div class="inputHolder">			
 	<div class="welcome">
-		<center><h2><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h2></center>
+		<center><h3><img src="http://birdspool.no-ip.org:5567/static/img/logo.png" style="width:2%;"</img>  Myriadcoin Profitability Calculator</h3></center>
         <p>
 	Welcome! This tool lets you figure out mining profitability for all the MYR algorithms. 
 	You don't need to fill out all the fields. The default difficulty is 
@@ -452,7 +452,7 @@
 	resistant to difficulty fluctuations. Alternatively, you can choose to use the 
 	 average over a longer period of time for even more resistance. Enjoy!<br/><br/>
 	 
-	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a></p>
+	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a>
 	</div>
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
@@ -614,6 +614,9 @@
 		</table>
 		<table class="mainTable">
 			<tr>
+				<td>
+					&nbsp;
+				</td>
 				<td>
 					<input type="submit" name="submit" value="Submit">&nbsp;
 					<input type="submit" name="clear" value="Clear">
@@ -871,7 +874,7 @@
 	</div>
 	  
 	</form>
-			</article>
+			</article> </p>
 			
 			<footer>
 				Mining profitability calculator by birdonwheels5. Want to show some love? Donate some MYR: MNYERWCHqrH1EkGNpF4T8o8dGB391A5jmm
