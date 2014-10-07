@@ -623,11 +623,15 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="submit" name="reset" value="Reset Price/Diff">&nbsp;
+					<input type="submit" name="reset" value="Reset Price/Diff">
+				</td>
+				<td>
 					<input type="submit" name="24_hr" value="24 Hour Avg Diff">
 				</td>
 				<td>
-					<input type="submit" name="3_day" value="3 Day Avg Diff">&nbsp;
+					<input type="submit" name="3_day" value="3 Day Avg Diff">
+				</td>
+				<td>
 					<input type="submit" name="week" value="1 Week Avg Diff">
 				</td>
 			</tr>
