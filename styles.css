@@ -51,7 +51,7 @@ div.welcome
 	#background-color:hsla(40, 0%, 67%, 0.78);
 	#-webkit-box-shadow: 3px 3px 5px #888888;
 	#-moz-box-shadow: 3px 3px 5px #888888;
-	margin-bottom:25px;
+	margin-bottom:10px;
 	padding-left:10px;
 }
 
@@ -68,7 +68,7 @@ div.inputHolder
 	#background-color:hsla(236, 0%, 67%, 0.78);
 	#-webkit-box-shadow: 3px 3px 5px #888888;
 	#-moz-box-shadow: 3px 3px 5px #888888;
-	margin-bottom:5px;
+	margin-bottom:10px;
 	padding-left:10px;
 }
 
@@ -81,7 +81,7 @@ div.inputBox
 	#background-color:hsla(123, 35%, 67%, 0.78);
 	#-webkit-box-shadow: 3px 3px 5px #888888;
 	#-moz-box-shadow: 3px 3px 5px #888888;
-	margin-bottom:25px;
+	margin-bottom:10px;
 	padding-left:10px;
 }
 
@@ -90,7 +90,7 @@ div.smallBox
 	width:25%;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom:25px;
+	margin-bottom:10px;
 	padding-left:10px;
 }
 
@@ -103,7 +103,7 @@ div.resultsBox
 	#background-color:hsla(40, 35%, 67%, 0.78);
 	#-webkit-box-shadow: 3px 3px 5px #888888;
 	#-moz-box-shadow: 3px 3px 5px #888888;
-	#margin-bottom:25px;
+	#margin-bottom:10px;
 	padding-left:10px;
 }
 
