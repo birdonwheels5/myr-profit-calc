@@ -450,7 +450,8 @@
 	You don't need to fill out all the fields. The default difficulty is 
 	calculated from the average of difficulties taken every hour over the past 24 hours, so it is  
 	resistant to difficulty fluctuations. Alternatively, you can choose to use the 
-	 average over a longer period of time for even more resistance. Enjoy!<br/>
+	 average over a longer period of time for even more resistance. Enjoy!<br/><br/>
+	 
 	For more information regarding Myriadcoin, visit <a href="http://myriadplatform.org" target="_blank">MyriadPlatform.org</a>
 	</div>
         	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
