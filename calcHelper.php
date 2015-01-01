@@ -3,11 +3,11 @@
 // Gets the average difficulties for all the algorithms
 function get_avg_diffs($avg)
 {
-
+	$password = "password";
 	$num_avg = $avg;
 	
 	// Establish connection to the database
-	$con = mysqli_connect("127.0.0.1", "root", "peanutbutteronmyballs", "myriadcoin");
+	$con = mysqli_connect("127.0.0.1", "root", $password, "myriadcoin");
 	
 	if (mysqli_connect_errno()) 
 	{
